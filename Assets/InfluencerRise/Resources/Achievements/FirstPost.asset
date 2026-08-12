@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f6f2c941499cc49ab4e28e2a33ff4e, type: 3}
+  m_Name: FirstPost
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Achievement
+  _achievementComment: 
+  metadata:
+    name: First Post
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  achievementGroups: []
+  _emptyLocksInfo: 
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 11400000, guid: f0ea12d9c1646df4e8ec7d4b63148f1f, type: 2}
+    businessUpgradeLevelLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 1
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  _rewardTablesInfo: 
+  rewardTables: []
+  claimAmount: 1
+  claimMultiplier: 2
+  _legacyRewards: []
+  autoClaim: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  claimSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0

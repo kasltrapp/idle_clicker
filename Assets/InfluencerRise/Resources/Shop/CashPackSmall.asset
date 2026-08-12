@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e21a3acf791ca48909182a4846bbfe, type: 3}
+  m_Name: CashPackSmall
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.ShopItem
+  _shopItemComment: 
+  metadata:
+    name: Cash Pack (Small)
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  shopItemGroups: []
+  productId: 
+  buyWithAd: 0
+  _multipleCostsFlag:
+    Mantissa: 0
+    Exponent: 0
+  _zeroFlag:
+    Mantissa: 0
+    Exponent: 0
+  _multipleCostsInfo: 
+  inGameCost: []
+  _rewardTablesInfo: 
+  rewardTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 5
+        Exponent: 2
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  maxPurchases: 0
+  _locksInfo: 
+  locks: []
+  _upperLocksInfo: 
+  upperLocks: []
+  unlockOnlyOnce: 1
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0

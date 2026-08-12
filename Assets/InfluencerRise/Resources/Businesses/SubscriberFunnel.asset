@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: SubscriberFunnel
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Business
+  _businessComment: 
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  levelUpSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  productionStartSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  productionEndSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  metadata:
+    name: Subscriber Funnel
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  location: {fileID: 11400000, guid: 41d6bd6502c27b44a815c989b8f53ae1, type: 2}
+  businessName: Subscriber Funnel
+  image: {fileID: 0}
+  iconString: 
+  model: {fileID: 0}
+  description: 
+  metadataLegacySyncState:
+    name: Subscriber Funnel
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+    inputAmount:
+      Mantissa: 8
+      Exponent: 3
+  costMultiplier: 1.15
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 180
+  dropEvaluationMode: 0
+  autoProduce: 0
+  manager: {fileID: 0}
+  productionRoundMode: 0
+  increaseProductionAmountAfterRoundEnd: 0
+  syncedIncreaseProductionAmountAfterRoundEnd: 0
+  productionRoundModeMigrated: 1
+  allowConcurrentProductionRounds: 0
+  autoCollect: 1
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 6
+        Exponent: 1
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  allowPartialProductionCost: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  productionLocks: []
+  upperProductionLocks: []
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 0}
+    businessUpgradeLevelLock: {fileID: 11400000, guid: b94ca9164405bfd448b3c8f0379b8a7b, type: 2}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 3
+      Exponent: 0
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  _upgradeLevelsComment: 
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2

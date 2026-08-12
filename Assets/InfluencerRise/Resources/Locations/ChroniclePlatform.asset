@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d1649b1316002409b97c919ead037c, type: 3}
+  m_Name: ChroniclePlatform
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Location
+  _locationComment: 
+  metadata:
+    name: The Chronicle (long-form)
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  locationGroups: []
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 1
+  sortOrder: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+    inputAmount:
+      Mantissa: 5
+      Exponent: 3
+  costMultiplier: 1
+  _starterOutputTablesInfo: 
+  starterOutputTables: []
+  backgroundMusic:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0

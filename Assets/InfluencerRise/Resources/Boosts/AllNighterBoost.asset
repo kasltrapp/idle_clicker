@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8f39bb6e0880e645ac2ca5f6b4b42c4, type: 3}
+  m_Name: AllNighterBoost
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.TimeSkipBoost
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  activateSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  metadata:
+    name: All Nighter
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  boostGroups: []
+  boostName: All Nighter
+  icon: {fileID: 0}
+  iconString: 
+  description: 
+  metadataLegacySyncState:
+    name: All Nighter
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  _costInfo: 
+  cost: []
+  costMultiplier: 1
+  useGeometricBoughtAmount: 0
+  _boostLockComment: 
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 1
+  _timeSkipComment: 
+  simulateBoosts: 0
+  skipTime:
+    days: 0
+    hours: 4
+    minutes: 0
+    seconds: 0
