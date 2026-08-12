@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2c26633b99524daea61e42a419ee54d7
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/PlayerProgression/PlayerProgression.unity
+  uploadId: 957850

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1cd28f7201b647d0be4eeddb7c483a61
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ShopRewardCompletion/ShopRewardCompletion.unity
+  uploadId: 957850

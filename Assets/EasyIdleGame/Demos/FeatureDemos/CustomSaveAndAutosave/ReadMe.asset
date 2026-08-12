@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d79210d2564f739f9a05a738b8a1d3, type: 3}
+  m_Name: ReadMe
+  m_EditorClassIdentifier:
+  data:
+    title: Custom Save And Autosave
+    summary: A custom SaveFile subclass stores project state next to the base economy
+      state, while a custom SaveAndLoad coalesces save-worthy events into queued writes
+      and suppresses autosave during load.
+    resourcePrefix: demo_customsave
+    sections:
+    - heading: Project setup
+      body: DemoProjectSaveFile derives from SaveFile, captures project state in its
+        constructor, and restores it after base.Load(). DemoCustomSaveAndLoad overrides
+        Save and Load with SaveAndLoadSystem<DemoProjectSaveFile>, reapplies the clamped
+        offline-time policy explicitly, and writes only after a save-worthy change.
+    - heading: What to try
+      body: Buy, produce, and travel from the Save-Worthy Events panel and watch source
+        strings, same-frame suppression, and the coalesced write counter. Save a board
+        version, disable autosave, change it again, then Load to see the saved project
+        note and board version restored. Re-enable autosave to write pending changes,
+        or activate the pre-granted Save-session automation boost, save, exit Play
+        Mode, and re-enter to demonstrate offline profit without making the tracked
+        Business auto-produce by default.
+    - heading: Caveats
+      body: Guard event-driven autosave while loading, treat the save-worthy callback
+        as a dirty flag rather than a transaction log, and reconcile project-owned
+        visuals from loaded holders after base state is restored. ProfitCalculator
+        simulates only businesses eligible for automatic production, so the temporary
+        automation boost must be active in the saved state for this manual Business
+        to generate offline profit.

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d53bbdae82a808a47b876e3e4071f96b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/AdventureCommunist/Resources/ScienceCurrency.asset
+  uploadId: 957850

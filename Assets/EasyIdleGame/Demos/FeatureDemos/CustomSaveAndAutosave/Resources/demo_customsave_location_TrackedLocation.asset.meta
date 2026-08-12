@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 622835cd570b02ab96c4821efb3b33c7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/CustomSaveAndAutosave/Resources/demo_customsave_location_TrackedLocation.asset
+  uploadId: 957850

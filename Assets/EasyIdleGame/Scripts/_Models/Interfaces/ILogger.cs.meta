@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 30d8f00d14b95c84e91d5a4dbac40d30
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts/_Models/Interfaces/ILogger.cs
+  uploadId: 957850

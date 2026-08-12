@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d79210d2564f739f9a05a738b8a1d3, type: 3}
+  m_Name: ReadMe
+  m_EditorClassIdentifier: 
+  data:
+    title: Shop Reward Completion
+    summary: Shop rewards can be granted by external purchase/ad callbacks, then used
+      like normal economy rewards.
+    resourcePrefix: demo_shop
+    sections:
+    - heading: Project setup
+      body: Create ShopItem rewards and call CompleteExternalPurchase once from a
+        verified store/ad callback. Completion grants rewards immediately; calling
+        TryConsumeItem later grants the same rewards again.

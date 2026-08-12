@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 11a5ed73cb764c3481ac0ac8ece1eac3
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ProductionCosts/ProductionCosts.unity
+  uploadId: 957850

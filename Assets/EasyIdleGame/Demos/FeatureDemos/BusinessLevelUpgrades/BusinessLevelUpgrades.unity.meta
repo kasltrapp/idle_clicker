@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c7c29f9c2bdc73742af16ad9369b93d6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/BusinessLevelUpgrades/BusinessLevelUpgrades.unity
+  uploadId: 957850

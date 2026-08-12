@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d03aeac843dc4efa8cf1daa6af615d12
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/PrestigeResets/ReadMe.asset
+  uploadId: 957850

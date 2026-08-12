@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f670508faef78fc479b96ef81786e1a0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/01_BasicFlow/ReadMe.asset
+  uploadId: 957850

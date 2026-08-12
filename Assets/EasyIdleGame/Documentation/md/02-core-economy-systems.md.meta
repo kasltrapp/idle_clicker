@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eb1aab9b9f4a53c1a13691503f5c8a10
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/md/02-core-economy-systems.md
+  uploadId: 957850

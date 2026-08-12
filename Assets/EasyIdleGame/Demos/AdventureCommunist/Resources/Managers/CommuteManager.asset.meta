@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3ab940d4b69e744ea87e75510b96836
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/AdventureCommunist/Resources/Managers/CommuteManager.asset
+  uploadId: 957850

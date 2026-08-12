@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cd28b80fc1e8b384b88e6f95fa68555d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Inspectors/CustomInspectors/HolderManagers/BoostsManagerInspector.cs
+  uploadId: 957850

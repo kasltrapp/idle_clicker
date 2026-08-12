@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b9800f4b3f23418798cb70bfeab57ed9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/MergingRecipes/MergingRecipes.unity
+  uploadId: 957850

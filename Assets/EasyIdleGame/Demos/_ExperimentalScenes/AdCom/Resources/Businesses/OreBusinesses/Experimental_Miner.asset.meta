@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: de93bd8dae31fdf4c898dc1e3484eaad
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Businesses/OreBusinesses/Experimental_Miner.asset
+  uploadId: 957850

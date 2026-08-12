@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 04a008eb0735f4b4a82fb6b5deea326d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_UI/Displayers/UpgradableBusinessDisplayer.cs
+  uploadId: 957850

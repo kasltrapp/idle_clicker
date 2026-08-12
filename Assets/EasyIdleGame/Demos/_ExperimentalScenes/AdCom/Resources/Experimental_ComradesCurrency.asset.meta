@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 708749695021ebc45bf4107e9edc8365
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Experimental_ComradesCurrency.asset
+  uploadId: 957850

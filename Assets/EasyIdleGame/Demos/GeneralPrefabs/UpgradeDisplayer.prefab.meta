@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a629fafbb463c4c4095e618e1753bc5e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/UpgradeDisplayer.prefab
+  uploadId: 957850

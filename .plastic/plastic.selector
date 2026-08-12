@@ -1,0 +1,4 @@
+repository "Tiny Dynasties Idle/Idel Clickers@11270625022529@cloud"
+  path "/"
+    br "/main"
+    co "/main"

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c5b81536038f42a7a0606f045c0d6678
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ManagersAndAutomation/Resources/demo_managers_manager_Foreman.asset
+  uploadId: 957850

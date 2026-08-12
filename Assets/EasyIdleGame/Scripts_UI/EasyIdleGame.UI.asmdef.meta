@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b2d69d120778d834589826f420cae56c
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_UI/EasyIdleGame.UI.asmdef
+  uploadId: 957850

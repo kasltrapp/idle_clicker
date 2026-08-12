@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: demo_locks_business_LockedFactory
+  m_EditorClassIdentifier: 
+  _businessComment: 
+  metadata:
+    name: Locked by currencies and player level
+    icon: {fileID: 0}
+    iconString: '[Lock]'
+    model: {fileID: 0}
+    description: Needs enough credits and gems, a bought starter stand, and the required
+      player level before purchases are allowed.
+  businessName: Locked by currencies and player level
+  image: {fileID: 0}
+  iconString: '[Lock]'
+  model: {fileID: 0}
+  description: Needs enough credits and gems, a bought starter stand, and the required
+    player level before purchases are allowed.
+  metadataLegacySyncState:
+    name: Locked by currencies and player level
+    icon: {fileID: 0}
+    iconString: '[Lock]'
+    model: {fileID: 0}
+    description: Needs enough credits and gems, a bought starter stand, and the required
+      player level before purchases are allowed.
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: e864673402df4cad922d6bd2ee18c335, type: 2}
+    inputAmount:
+      Mantissa: 12
+      Exponent: 0
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: cf3c73eec293490689953abf24b3a6d2, type: 2}
+    inputAmount:
+      Mantissa: 2
+      Exponent: 0
+  costMultiplier: 1.2
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 4
+  dropEvaluationMode: 0
+  autoProduce: 0
+  manager: {fileID: 0}
+  productionRoundMode: 0
+  increaseProductionAmountAfterRoundEnd: 0
+  syncedIncreaseProductionAmountAfterRoundEnd: 0
+  productionRoundModeMigrated: 1
+  allowConcurrentProductionRounds: 0
+  autoCollect: 0
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: e864673402df4cad922d6bd2ee18c335, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 45
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  allowPartialProductionCost: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 11400000, guid: e864673402df4cad922d6bd2ee18c335, type: 2}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 120
+      Exponent: 0
+  - businessLock: {fileID: 11400000, guid: c52356a6e61c4697aac2b81868c84809, type: 2}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 1
+    inputAmount:
+      Mantissa: 3
+      Exponent: 0
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 1
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 2
+      Exponent: 0
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  _upgradeLevelsComment: 
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2

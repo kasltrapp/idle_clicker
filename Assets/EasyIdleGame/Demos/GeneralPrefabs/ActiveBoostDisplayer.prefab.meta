@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: cc768d7f7ef44154b80da0e6bedda04d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/ActiveBoostDisplayer.prefab
+  uploadId: 957850

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0ad0fb2ee74b49cfb797b993c95b1d4e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/DailyRewards/Resources/demo_daily_reward_DayOneReward.asset
+  uploadId: 957850

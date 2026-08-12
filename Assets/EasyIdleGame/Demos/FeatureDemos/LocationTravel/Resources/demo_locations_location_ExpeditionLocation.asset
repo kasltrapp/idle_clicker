@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d1649b1316002409b97c919ead037c, type: 3}
+  m_Name: demo_locations_location_ExpeditionLocation
+  m_EditorClassIdentifier: 
+  _locationComment: 
+  metadata:
+    name: Paid expedition location
+    icon: {fileID: 0}
+    iconString: '[Expedition]'
+    model: {fileID: 0}
+    description: Requires player level 2 and travel credits before it becomes active, then grants starter rewards when entered.
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 1
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 2
+      Exponent: 0
+  unlockOnlyOnce: 1
+  sortOrder: 10
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 9bc82b7bb3224dbb9641aa133cf81c6e, type: 2}
+    inputAmount:
+      Mantissa: 30
+      Exponent: 0
+  costMultiplier: 1
+  _starterOutputTablesInfo: 
+  starterOutputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: 9bc82b7bb3224dbb9641aa133cf81c6e, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 5
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1

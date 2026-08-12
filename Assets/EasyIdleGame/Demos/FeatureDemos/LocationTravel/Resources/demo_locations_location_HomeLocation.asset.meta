@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 844c1340a1fe4a5f8b775771433307a9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/LocationTravel/Resources/demo_locations_location_HomeLocation.asset
+  uploadId: 957850

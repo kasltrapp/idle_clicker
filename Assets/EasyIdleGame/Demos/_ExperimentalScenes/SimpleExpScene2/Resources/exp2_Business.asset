@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: exp2_Business
+  m_EditorClassIdentifier: 
+  businessName: Business12
+  image: {fileID: 21300000, guid: 5772cd776ac66f144924f01dd931ac66, type: 3}
+  iconString: 
+  model: {fileID: 0}
+  description: 
+  businessGroup: 
+  maxAmount_:
+    Mantissa: 1
+    Exponent: 1
+  maxBuyableAmount:
+    Mantissa: 1
+    Exponent: 0
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: f09de1dca3df0b94e97aa489fb9783cc, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  costMultiplier: 2
+  timeToProduce: 5
+  autoProduce: 0
+  manager: {fileID: 11400000, guid: 2838726ea426b5a4ba4a2a793f5285d3, type: 2}
+  increaseProductionAmountAfterRoundEnd: 0
+  autoCollect: 1
+  outputs:
+  - businessOutput: {fileID: 0}
+    currencyOutput: {fileID: 11400000, guid: f09de1dca3df0b94e97aa489fb9783cc, type: 2}
+    boostOutput: {fileID: 0}
+    managerOutput: {fileID: 0}
+    outputAmount:
+      Mantissa: 1
+      Exponent: 2
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  unlockOnlyOnce: 1
+  locks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  upgradeLevels:
+  - level:
+      Mantissa: 1
+      Exponent: 0
+    businessName: 
+    image: {fileID: 21300000, guid: 92c2e35f9c19a5c478b5b363bd4440db, type: 3}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+    maxAmount_:
+      Mantissa: 2
+      Exponent: 1
+    maxBuyableAmount:
+      Mantissa: 2
+      Exponent: 0
+  - level:
+      Mantissa: 2
+      Exponent: 0
+    businessName: 
+    image: {fileID: 21300000, guid: 6a386cfe63b958548aaa19db6f803b3a, type: 3}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+    maxAmount_:
+      Mantissa: 3
+      Exponent: 1
+    maxBuyableAmount:
+      Mantissa: 3
+      Exponent: 0
+  - level:
+      Mantissa: 3
+      Exponent: 0
+    businessName: 
+    image: {fileID: 21300000, guid: a37bfb861973cd44fa4cc4eea44ee708, type: 3}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+    maxAmount_:
+      Mantissa: 4
+      Exponent: 1
+    maxBuyableAmount:
+      Mantissa: 4
+      Exponent: 0
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: f09de1dca3df0b94e97aa489fb9783cc, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  upgradeCostMultiplier: 2

@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e7f65e7ff45e44daf63fe20620c691, type: 3}
+  m_Name: __testManager
+  m_EditorClassIdentifier: 
+  _managerComment: 
+  managerName: 
+  description: 
+  image: {fileID: 0}
+  iconString: 
+  cost: []
+  costMultiplier: 1
+  maxBuyableAmount: -1
+  useGeometricBoughtAmount: 0
+  locks: []
+  unlockOnlyOnce: 1
+  autoUpgradeForFree: 0
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: c18905ec12ed0c24790c92663b703bf6, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  upgradeCostMultiplier: 3
+  passiveBoosts:
+  - upgradeType: 1
+    value: 2
+  autoProduceOnLevel: 0
+  autoCollectOnLevel: 0
+  businessSpeedMultiplier: 2
+  _activeBoostComment: 
+  activeDuration:
+    days: 0
+    hours: 0
+    minutes: 1
+    seconds: 0
+  cooldownDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+  activeUpgrade:
+  - upgradeType: 0
+    value: 2

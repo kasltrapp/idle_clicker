@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a69f27023680e3d43b3c1003919f7a85
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/DocsDemo/DocsScene.unity
+  uploadId: 957850

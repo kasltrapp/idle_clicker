@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e7f65e7ff45e44daf63fe20620c691, type: 3}
+  m_Name: demo_events_manager_ArcadeTechnician
+  m_EditorClassIdentifier:
+  _managerComment:
+  managerName: Arcade Technician
+  description: Automates the Claw Machine - hire once for auto start, twice for auto
+    collect. After hiring, the production and currency events fire hands-free, showing
+    automation through the exact same listeners as manual play.
+  image: {fileID: 0}
+  iconString: '[Tech]'
+  _costInfo:
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 2ff89eab904a4b4e92500560eddf8d62, type: 2}
+    inputAmount:
+      Mantissa: 75
+      Exponent: 0
+  costMultiplier: 1
+  maxBuyableAmount: -1
+  useGeometricBoughtAmount: 0
+  _locksInfo:
+  locks: []
+  unlockOnlyOnce: 1
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2
+  _passiveBoostsInfo:
+  passiveBoosts:
+  - upgradeType: 1
+    value: 1.5
+  autoProduceOnLevel: 1
+  autoCollectOnLevel: 2
+  businessSpeedMultiplier: 1.5
+  _activeBoostComment:
+  activeDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 20
+  cooldownDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 30
+  _activeUpgradeInfo:
+  activeUpgrade:
+  - upgradeType: 0
+    value: 3

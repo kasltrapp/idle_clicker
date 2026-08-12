@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e9664a458c285a846a42dc26aa778297
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/SimpleExpScene/Resources/newBusinessWrapper.asset
+  uploadId: 957850

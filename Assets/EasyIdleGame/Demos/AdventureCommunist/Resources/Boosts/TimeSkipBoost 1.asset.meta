@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0bb05101c1fc42b4bbf979ede8d5a6ca
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/AdventureCommunist/Resources/Boosts/TimeSkipBoost
+    1.asset
+  uploadId: 957850

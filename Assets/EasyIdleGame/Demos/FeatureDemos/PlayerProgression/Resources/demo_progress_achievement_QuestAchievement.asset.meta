@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1810fc7aed3c4b6483832fdc0f65daea
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/PlayerProgression/Resources/demo_progress_achievement_QuestAchievement.asset
+  uploadId: 957850

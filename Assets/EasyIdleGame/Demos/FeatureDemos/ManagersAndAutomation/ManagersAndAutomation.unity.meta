@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6392085ef3d84a52b83deaec25a6cf26
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ManagersAndAutomation/ManagersAndAutomation.unity
+  uploadId: 957850

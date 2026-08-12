@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f9c0492adf826d44c828a089211c4905
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/RewardListDayDisplayer.prefab
+  uploadId: 957850

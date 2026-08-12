@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 13f4f5f2db537b448af1019a87f6b126
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Experimental_OreCurrency.asset
+  uploadId: 957850

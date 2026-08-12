@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 00f3865d95cc15640a9e4aee9d32d24d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/TimedUpgradeQueues/TimedUpgradeQueues.unity
+  uploadId: 957850

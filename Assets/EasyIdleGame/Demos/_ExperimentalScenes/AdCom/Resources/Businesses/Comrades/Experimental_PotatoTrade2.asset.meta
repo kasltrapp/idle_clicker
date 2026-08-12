@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aee0a6d95cfcf6f448c3c90e079f6466
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Businesses/Comrades/Experimental_PotatoTrade2.asset
+  uploadId: 957850

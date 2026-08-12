@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f83c352be37914584bac85e9187cf0, type: 3}
+  m_Name: demo_prestige_currency_Credits
+  m_EditorClassIdentifier: 
+  _currencyComment: 
+  metadata:
+    name: Credits
+    icon: {fileID: 0}
+    iconString: $
+    model: {fileID: 0}
+    description: Resettable progress currency that satisfies prestige requirements
+      and is cleared when prestige runs.
+  image: {fileID: 0}
+  currencyName: Credits
+  iconString: $
+  description: Resettable progress currency that satisfies prestige requirements
+    and is cleared when prestige runs.
+  metadataLegacySyncState:
+    name: Credits
+    icon: {fileID: 0}
+    iconString: $
+    model: {fileID: 0}
+    description: Resettable progress currency that satisfies prestige requirements
+      and is cleared when prestige runs.
+  currencyGroups: []
+  maxAmount:
+    Mantissa: -1
+    Exponent: 0

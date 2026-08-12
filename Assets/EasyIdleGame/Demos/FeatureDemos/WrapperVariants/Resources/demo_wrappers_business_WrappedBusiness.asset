@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d6cd05f14cbaf4b98b40433eaad0b4, type: 3}
+  m_Name: demo_wrappers_business_WrappedBusiness
+  m_EditorClassIdentifier: 
+  _businessComment: 
+  metadata:
+    name: Base Forge
+    icon: {fileID: 0}
+    iconString: '[Base]'
+    model: {fileID: 0}
+    description: Original business template. Its self-output points at itself until
+      a wrapper sync rewrites references for the wrapped copy.
+  businessName: Base Forge
+  image: {fileID: 0}
+  iconString: '[Base]'
+  model: {fileID: 0}
+  description: Original business template. Its self-output points at itself until
+    a wrapper sync rewrites references for the wrapped copy.
+  metadataLegacySyncState:
+    name: Base Forge
+    icon: {fileID: 0}
+    iconString: '[Base]'
+    model: {fileID: 0}
+    description: Original business template. Its self-output points at itself until
+      a wrapper sync rewrites references for the wrapped copy.
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: b213b6805d6c4c5ea758e99c2084d9b1, type: 2}
+    inputAmount:
+      Mantissa: 20
+      Exponent: 0
+  costMultiplier: 1.15
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 2
+  dropEvaluationMode: 0
+  autoProduce: 0
+  manager: {fileID: 0}
+  productionRoundMode: 0
+  increaseProductionAmountAfterRoundEnd: 0
+  syncedIncreaseProductionAmountAfterRoundEnd: 0
+  productionRoundModeMigrated: 1
+  allowConcurrentProductionRounds: 0
+  autoCollect: 0
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: b213b6805d6c4c5ea758e99c2084d9b1, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 7
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+    - businessOutput: {fileID: 11400000}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 0.4
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  allowPartialProductionCost: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks: []
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 0
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 10
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  _upgradeLevelsComment: 
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2
+  _businessWrapperComment: 
+  underlyingBusiness: {fileID: 11400000, guid: af10e94345ce4f658488b763cf666ca3, type: 2}

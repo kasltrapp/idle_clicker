@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ffe0b28c2692483da1f1e1caa8a3db43
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/PlayerProgression/Resources/demo_progress_currency_Gems.asset
+  uploadId: 957850

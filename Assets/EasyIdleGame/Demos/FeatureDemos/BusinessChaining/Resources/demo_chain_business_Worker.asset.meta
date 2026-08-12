@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f27f5a5f048a1884c9c7cb67cab80eee
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/BusinessChaining/Resources/demo_chain_business_Worker.asset
+  uploadId: 957850

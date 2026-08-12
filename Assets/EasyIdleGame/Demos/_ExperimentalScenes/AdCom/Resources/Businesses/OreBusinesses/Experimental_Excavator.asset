@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: Experimental_Excavator
+  m_EditorClassIdentifier: 
+  _businessComment: 
+  businessName: Excavator
+  image: {fileID: 21300000, guid: 94e913d41c2ac684497a81da47c050c8, type: 3}
+  iconString: 
+  model: {fileID: 0}
+  description: 
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 13f4f5f2db537b448af1019a87f6b126, type: 2}
+    inputAmount:
+      Mantissa: 270
+      Exponent: 1971
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 708749695021ebc45bf4107e9edc8365, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  costMultiplier: 1
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 3
+  dropEvaluationMode: 0
+  autoProduce: 0
+  manager: {fileID: 11400000, guid: 1cb0f16073d9f1941874084ebac1e037, type: 2}
+  increaseProductionAmountAfterRoundEnd: 1
+  autoCollect: 1
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 11400000, guid: de93bd8dae31fdf4c898dc1e3484eaad, type: 2}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 1
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 5
+      Exponent: 0
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2

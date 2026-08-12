@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b2ac55435d8725b0bb1032463383dc44
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ProductionModifiers/Resources/demo_prodmod_currency_Coins.asset
+  uploadId: 957850

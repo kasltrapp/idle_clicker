@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5169a482f2ef57f0bc1961a83f78e181
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/md/04-persistence-offline-prestige.md
+  uploadId: 957850

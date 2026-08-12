@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a929397aa776d7548aada5221ae6a181
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/PlayerLevelDisplayer.prefab
+  uploadId: 957850

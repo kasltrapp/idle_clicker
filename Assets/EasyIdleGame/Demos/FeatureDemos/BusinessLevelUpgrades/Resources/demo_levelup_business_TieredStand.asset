@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: demo_levelup_business_TieredStand
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Business
+  _businessComment: 
+  metadata:
+    name: Tiered stand
+    icon: {fileID: 0}
+    iconString: T
+    model: {fileID: 0}
+    description: A compact business-level upgrade demo. Upgrades change active metadata
+      and raise the direct buy cap.
+  businessName: Tiered stand
+  image: {fileID: 0}
+  iconString: T
+  model: {fileID: 0}
+  description: A compact business-level upgrade demo. Upgrades change the active
+    business metadata while keeping ownership and direct buying unlimited.
+  metadataLegacySyncState:
+    name: Tiered stand
+    icon: {fileID: 0}
+    iconString: T
+    model: {fileID: 0}
+    description: A compact business-level upgrade demo. Upgrades change the active
+      business metadata while keeping ownership and direct buying unlimited.
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: 3
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: cc6881da3a9174f41a89a7944ca8f321, type: 2}
+    inputAmount:
+      Mantissa: 2
+      Exponent: 1
+  costMultiplier: 1.1
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 2
+  dropEvaluationMode: 0
+  autoProduce: 0
+  manager: {fileID: 0}
+  productionRoundMode: 0
+  increaseProductionAmountAfterRoundEnd: 0
+  syncedIncreaseProductionAmountAfterRoundEnd: 0
+  productionRoundModeMigrated: 1
+  allowConcurrentProductionRounds: 0
+  autoCollect: 1
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: cc6881da3a9174f41a89a7944ca8f321, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1.2
+        Exponent: 1
+      outputMaxAmount:
+        Mantissa: 1.2
+        Exponent: 1
+      dropChance: 1
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  allowPartialProductionCost: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks: []
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 0
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  _upgradeLevelsComment: 
+  upgradeLevels:
+  - level:
+      Mantissa: 1
+      Exponent: 0
+    _overridesComment: 
+    metadata:
+      name: Street Cart
+      icon: {fileID: 0}
+      iconString: Cart
+      model: {fileID: 0}
+      description: First business upgrade level. The holder reads this metadata override
+        and raises the direct buy cap.
+    businessName: Street Cart
+    image: {fileID: 0}
+    iconString: Cart
+    model: {fileID: 0}
+    description: First business upgrade level. The holder reads this metadata override
+      and raises the direct buy cap.
+    metadataLegacySyncState:
+      name: Street Cart
+      icon: {fileID: 0}
+      iconString: Cart
+      model: {fileID: 0}
+      description: First business upgrade level. The holder reads this metadata override
+        and raises the direct buy cap.
+    maxAmount_:
+      Mantissa: -1
+      Exponent: 0
+    maxBuyableAmount:
+      Mantissa: 6
+      Exponent: 0
+  - level:
+      Mantissa: 2
+      Exponent: 0
+    _overridesComment: 
+    metadata:
+      name: Corner Shop
+      icon: {fileID: 0}
+      iconString: Shop
+      model: {fileID: 0}
+      description: Second business upgrade level. The active metadata changes again
+        and the direct buy cap expands further.
+    businessName: Corner Shop
+    image: {fileID: 0}
+    iconString: Shop
+    model: {fileID: 0}
+    description: Second business upgrade level. The active metadata changes again
+      and the direct buy cap expands further.
+    metadataLegacySyncState:
+      name: Corner Shop
+      icon: {fileID: 0}
+      iconString: Shop
+      model: {fileID: 0}
+      description: Second business upgrade level. The active metadata changes again
+        and the direct buy cap expands further.
+    maxAmount_:
+      Mantissa: -1
+      Exponent: 0
+    maxBuyableAmount:
+      Mantissa: 12
+      Exponent: 0
+  autoUpgradeForFree: 0
+  autoUpgradeToFirstLevelFree: 0
+  upgradeCost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: cc6881da3a9174f41a89a7944ca8f321, type: 2}
+    inputAmount:
+      Mantissa: 5
+      Exponent: 1
+  upgradeCostMultiplier: 2

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac1a4496a7cb1a44b113e5d5c1af83c, type: 3}
+  m_Name: exp_AutoproduceBoost
+  m_EditorClassIdentifier: 
+  boostName: 
+  icon: {fileID: 0}
+  description: 
+  cost: []
+  costMultiplier: 1
+  locks: []
+  unlockOnlyOnce: 1
+  duration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 30
+  group: 

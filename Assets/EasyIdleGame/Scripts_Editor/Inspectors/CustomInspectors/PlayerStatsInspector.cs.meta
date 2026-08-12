@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 14370ce7936cd1a4e916a4196d5d3409
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Inspectors/CustomInspectors/PlayerStatsInspector.cs
+  uploadId: 957850

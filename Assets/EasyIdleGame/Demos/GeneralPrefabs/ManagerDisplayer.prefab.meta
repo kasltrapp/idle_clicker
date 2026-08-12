@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 48b2bed75fb3c694baab66f0cf76b7b1
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/ManagerDisplayer.prefab
+  uploadId: 957850

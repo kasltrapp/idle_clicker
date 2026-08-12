@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 41b4ca4498907cd4abc837836945d104
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/AdventureCommunist/Resources/Businesses/Comrades/OreTrade.asset
+  uploadId: 957850

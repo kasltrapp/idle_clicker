@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e4d23adecac6abf458ac74b4dda8cac5
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/01-create-your-first-idle-game.pdf
+  uploadId: 957850

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 638cfc898e52f704e8c52deaaab288a4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Inspectors/CustomInspectors/HolderManagers/CurrencyManagerInspector.cs
+  uploadId: 957850

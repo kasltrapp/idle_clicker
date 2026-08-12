@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6246c5697df619470b15e6b9888f1400
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/CustomSaveAndAutosave/Resources/demo_customsave_currency_Gold.asset
+  uploadId: 957850

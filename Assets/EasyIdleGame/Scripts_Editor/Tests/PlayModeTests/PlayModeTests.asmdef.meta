@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1692f63ad4b0fb14d971af73e061fea5
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Tests/PlayModeTests/PlayModeTests.asmdef
+  uploadId: 957850

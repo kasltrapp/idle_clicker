@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: __testBusinessWithManager
+  m_EditorClassIdentifier: 
+  businessName: 
+  image: {fileID: 0}
+  description: 
+  businessGroup: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  cost: []
+  costMultiplier: 1
+  manager: {fileID: 11400000, guid: 69a4f885c0282a64184fe689d9fdd108, type: 2}
+  autoProduce: 0
+  increaseProductionAmountAfterRoundEnd: 1
+  timeToProduce: 1
+  autoCollect: 1
+  outputs: []
+  unlockOnlyOnce: 1
+  locks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  productionCost: []
+  scaleProductionCostWithAmount: 0

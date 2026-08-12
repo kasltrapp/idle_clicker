@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 6ce2798d824e0fd44884342fb51f5e76
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts/Boosts/Models/BoostGroup.cs
+  uploadId: 957850

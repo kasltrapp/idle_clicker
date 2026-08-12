@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ff16a10d380f9374c9a89da53d5ed720
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Businesses/PotatoFarms/Experimental_Commute.asset
+  uploadId: 957850

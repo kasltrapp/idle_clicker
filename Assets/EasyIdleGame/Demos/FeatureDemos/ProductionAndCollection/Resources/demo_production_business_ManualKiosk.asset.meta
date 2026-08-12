@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d15de1513b7946639b804b7c5dd22026
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ProductionAndCollection/Resources/demo_production_business_ManualKiosk.asset
+  uploadId: 957850

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6cd997777bb2a5766b31b203a4bd3bf8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/ProductionModifiers/Resources/demo_prodmod_ScalingModifier.asset
+  uploadId: 957850

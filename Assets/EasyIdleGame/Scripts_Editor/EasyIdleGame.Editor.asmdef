@@ -1,0 +1,17 @@
+{
+    "name": "EasyIdleGame.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:9d1a2154f699f60498fa5c53d5a2cc46",
+        "GUID:b2d69d120778d834589826f420cae56c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

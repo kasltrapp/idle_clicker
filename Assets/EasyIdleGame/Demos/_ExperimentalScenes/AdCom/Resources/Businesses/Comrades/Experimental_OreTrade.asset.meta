@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0edc03be23ed12249bee9278ab351beb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/AdCom/Resources/Businesses/Comrades/Experimental_OreTrade.asset
+  uploadId: 957850

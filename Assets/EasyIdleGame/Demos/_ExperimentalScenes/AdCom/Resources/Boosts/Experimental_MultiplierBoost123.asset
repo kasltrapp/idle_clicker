@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c6592458383474f9bf02955b0dafe6, type: 3}
+  m_Name: Experimental_MultiplierBoost123
+  m_EditorClassIdentifier: 
+  boostName: 2x prod 5min
+  icon: {fileID: 0}
+  description: 
+  cost: []
+  locks: []
+  upgradeBlocks:
+  - upgradeType: 1
+    value: 10
+  duration:
+    days: 0
+    hours: 0
+    minutes: 5
+    seconds: 0
+  group: 

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c6592458383474f9bf02955b0dafe6, type: 3}
+  m_Name: demo_boosts_boost_ProductionBoost
+  m_EditorClassIdentifier: 
+  _boostComment: 
+  boostName: Mergeable production duration
+  icon: {fileID: 0}
+  iconString: '[x2]'
+  description: Reusing this exact boost extends the existing active timer instead of creating another active entry.
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 39b150dec9be4e77abc73f71801df873, type: 2}
+    inputAmount:
+      Mantissa: 10
+      Exponent: 0
+  costMultiplier: 1
+  useGeometricBoughtAmount: 1
+  _boostLockComment: 
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 1
+  _multiplierBoostComment: 
+  _upgradeBlocksInfo: 
+  upgradeBlocks:
+  - upgradeType: 0
+    value: 2
+  duration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 90
+  mergeRepeatedUses: 1
+  group: 
+  targetBusinessGroups:
+  - {fileID: 11400000, guid: 5d1ba87f59774c12aba81fd6381938d8, type: 2}
+  - {fileID: 0}

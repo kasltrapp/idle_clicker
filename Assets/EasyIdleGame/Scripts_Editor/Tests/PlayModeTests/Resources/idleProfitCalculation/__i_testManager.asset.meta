@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 04eeff7b93956104aa76052d54e84f74
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Tests/PlayModeTests/Resources/idleProfitCalculation/__i_testManager.asset
+  uploadId: 957850

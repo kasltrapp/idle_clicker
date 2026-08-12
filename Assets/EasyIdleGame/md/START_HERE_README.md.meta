@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 995c0e4847b05cdab7e1d1d634db313f
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/md/START_HERE_README.md
+  uploadId: 957850

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c6592458383474f9bf02955b0dafe6, type: 3}
+  m_Name: MultiplierBoost1_
+  m_EditorClassIdentifier: 
+  boostName: Boost1
+  icon: {fileID: 21300000, guid: 622cf530a85f9284689769f781648dbd, type: 3}
+  description: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: df1a4fbb3a02da44dacf89fbf4958f89, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 1
+  locks: []
+  unlockOnlyOnce: 1
+  upgradeBlocks:
+  - upgradeType: 0
+    value: 2
+  duration:
+    days: 0
+    hours: 0
+    minutes: 5
+    seconds: 0
+  group: 

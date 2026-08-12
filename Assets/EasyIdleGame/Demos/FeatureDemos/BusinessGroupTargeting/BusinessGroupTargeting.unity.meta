@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 7a910000000000000000000000000001
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/BusinessGroupTargeting/BusinessGroupTargeting.unity
+  uploadId: 957850

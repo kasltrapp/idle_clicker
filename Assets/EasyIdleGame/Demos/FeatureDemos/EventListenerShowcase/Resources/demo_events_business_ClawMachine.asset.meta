@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0214020294a24c0a9606270554c5a559
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/EventListenerShowcase/Resources/demo_events_business_ClawMachine.asset
+  uploadId: 957850

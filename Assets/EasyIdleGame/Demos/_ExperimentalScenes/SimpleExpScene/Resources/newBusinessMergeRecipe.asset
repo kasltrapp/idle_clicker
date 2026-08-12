@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99358a70056560242bc42a280020589f, type: 3}
+  m_Name: newBusinessMergeRecipe
+  m_EditorClassIdentifier: 
+  _recipeComment: 
+  inputs:
+  - businessInput: {fileID: 11400000, guid: b02aa77851e06d74d950a16cee09dc22, type: 2}
+    currencyInput: {fileID: 0}
+    inputAmount:
+      Mantissa: 2
+      Exponent: 2223131212
+  outputTables:
+  - strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 11400000, guid: ae8fb2ec44b01934b8974f88875c61bd, type: 2}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  _legacyBusinessInputs: []
+  _legacyBusinessInputs2: []
+  _legacyBusinessOutputs: []
+  _legacyBusinessOutputs2: []

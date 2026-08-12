@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d3f0e88f78f7a849a502051181c3616
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/05-scripting-reference.pdf
+  uploadId: 957850

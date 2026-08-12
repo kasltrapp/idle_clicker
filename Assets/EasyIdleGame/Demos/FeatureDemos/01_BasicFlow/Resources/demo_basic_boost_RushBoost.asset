@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c6592458383474f9bf02955b0dafe6, type: 3}
+  m_Name: demo_basic_boost_RushBoost
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.GenericMultiplierBoost
+  _boostComment: 
+  metadata:
+    name: Rush boost
+    icon: {fileID: 0}
+    iconString: B
+    model: {fileID: 0}
+    description: One temporary boost that doubles production.
+  boostName: Rush boost
+  icon: {fileID: 0}
+  iconString: B
+  description: One temporary boost that doubles production.
+  metadataLegacySyncState:
+    name: Rush boost
+    icon: {fileID: 0}
+    iconString: B
+    model: {fileID: 0}
+    description: One temporary boost that doubles production.
+  _costInfo: 
+  cost: []
+  costMultiplier: 1
+  useGeometricBoughtAmount: 0
+  _boostLockComment: 
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 1
+  _multiplierBoostComment: 
+  _upgradeBlocksInfo: 
+  upgradeBlocks:
+  - upgradeType: 0
+    value: 2
+  duration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 30
+  mergeRepeatedUses: 1
+  group: 
+  targetBusinessGroups: []

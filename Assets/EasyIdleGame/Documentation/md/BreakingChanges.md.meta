@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 73bbe2ed50404be79618c7674b855043
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/md/BreakingChanges.md
+  uploadId: 957850

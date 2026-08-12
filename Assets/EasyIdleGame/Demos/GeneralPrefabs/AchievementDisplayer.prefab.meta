@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9aec5e6d9fd17f34eb0f78e87091a576
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/AchievementDisplayer.prefab
+  uploadId: 957850

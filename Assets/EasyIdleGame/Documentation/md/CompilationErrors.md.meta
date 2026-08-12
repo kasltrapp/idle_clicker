@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 79d609d3e3f24a0aac7b15aeaba520d9
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/md/CompilationErrors.md
+  uploadId: 957850

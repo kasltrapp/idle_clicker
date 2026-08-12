@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0f240dbac806a704a83cbd1b57b50b12
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/Openable/ProfitDisplayer.prefab
+  uploadId: 957850

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f45f718f1446446393c9cc3aaa395f53
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/EventListenerShowcase/Resources/demo_events_manager_ArcadeTechnician.asset
+  uploadId: 957850

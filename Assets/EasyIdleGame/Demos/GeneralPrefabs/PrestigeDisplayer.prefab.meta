@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b31d2b926f2449f44b7af059d198a7c0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/PrestigeDisplayer.prefab
+  uploadId: 957850

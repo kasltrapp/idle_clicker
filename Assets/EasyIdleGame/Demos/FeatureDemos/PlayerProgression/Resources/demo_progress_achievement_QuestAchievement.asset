@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f6f2c941499cc49ab4e28e2a33ff4e, type: 3}
+  m_Name: demo_progress_achievement_QuestAchievement
+  m_EditorClassIdentifier: 
+  _achievementComment: 
+  metadata:
+    name: Claim after quest progress
+    icon: {fileID: 0}
+    iconString: '[Ach]'
+    model: {fileID: 0}
+    description: Unlocks when the custom stat and earned-currency requirements are met, then grants its configured rewards.
+  _emptyLocksInfo: 
+  _locksInfo: 
+  locks:
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 11400000, guid: ad01882451d34ea786d5b3366210ac4c, type: 2}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 1
+    inputAmount:
+      Mantissa: 60
+      Exponent: 0
+  - businessLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 11400000, guid: dda163ed646f475a981a077b30bd25b0, type: 2}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  _rewardTablesInfo: 
+  rewardTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: ffe0b28c2692483da1f1e1caa8a3db43, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 3
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  _legacyRewards: []
+  autoClaim: 0

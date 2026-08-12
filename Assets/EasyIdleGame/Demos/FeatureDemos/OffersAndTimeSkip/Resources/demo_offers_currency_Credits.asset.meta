@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b63abd93ca834857af30ac0c13a9f1ac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/OffersAndTimeSkip/Resources/demo_offers_currency_Credits.asset
+  uploadId: 957850

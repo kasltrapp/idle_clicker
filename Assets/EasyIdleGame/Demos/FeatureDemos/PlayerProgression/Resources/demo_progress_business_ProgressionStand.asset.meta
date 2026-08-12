@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b531d0a32a144e7fbd659249f16e4a93
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/PlayerProgression/Resources/demo_progress_business_ProgressionStand.asset
+  uploadId: 957850

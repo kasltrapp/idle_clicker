@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 053f8b3b834f86040a9d4daa02209602
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/Openable/BusinessDetail.prefab
+  uploadId: 957850

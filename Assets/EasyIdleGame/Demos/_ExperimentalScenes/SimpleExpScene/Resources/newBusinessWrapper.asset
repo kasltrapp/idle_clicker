@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d6cd05f14cbaf4b98b40433eaad0b4, type: 3}
+  m_Name: newBusinessWrapper
+  m_EditorClassIdentifier: 
+  _businessComment: 
+  businessName: Business123
+  image: {fileID: 21300000, guid: 5772cd776ac66f144924f01dd931ac66, type: 3}
+  iconString: 
+  model: {fileID: 0}
+  description: 
+  businessGroup: 
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: f434d8852449bd2449682c6329f86f47, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 1
+  costMultiplier: 2
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 5
+  autoProduce: 0
+  manager: {fileID: 11400000, guid: 2838726ea426b5a4ba4a2a793f5285d3, type: 2}
+  increaseProductionAmountAfterRoundEnd: 0
+  autoCollect: 1
+  outputTables:
+  - strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: f434d8852449bd2449682c6329f86f47, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 2
+      outputMaxAmount:
+        Mantissa: 2
+        Exponent: 2
+      dropChance: 1
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  locks: []
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 1
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 100
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2
+  underlyingBusiness: {fileID: 11400000, guid: 26d22c74b6e407f4aa4f3afbec639406, type: 2}

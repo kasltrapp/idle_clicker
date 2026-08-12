@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5dd83dc6862b4dcc8ab8b48a08619f86
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/CustomSaveAndAutosave/Resources/demo_customsave_boost_SaveSessionAutomation.asset
+  uploadId: 957850

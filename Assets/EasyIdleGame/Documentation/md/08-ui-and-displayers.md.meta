@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 94db4b432f904d542978d92579bf0015
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Documentation/md/08-ui-and-displayers.md
+  uploadId: 957850

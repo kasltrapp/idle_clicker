@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e7f65e7ff45e44daf63fe20620c691, type: 3}
+  m_Name: exp_Manager1
+  m_EditorClassIdentifier: 
+  managerName: Manager1
+  description: 
+  image: {fileID: 21300000, guid: 24f46687a55d6da47af80383129ed410, type: 3}
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: f434d8852449bd2449682c6329f86f47, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 1
+  costMultiplier: 1
+  maxBuyableAmount: -1
+  locks: []
+  unlockOnlyOnce: 1
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2
+  businessSpeedMultiplier: 2
+  passiveBoosts:
+  - upgradeType: 1
+    value: 1
+  activeDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+  cooldownDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+  activeUpgrade: []

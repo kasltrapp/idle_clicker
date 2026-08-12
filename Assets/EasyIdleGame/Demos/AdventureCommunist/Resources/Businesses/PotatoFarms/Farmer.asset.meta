@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc66727eb04a1d44d89856a939c54156
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/AdventureCommunist/Resources/Businesses/PotatoFarms/Farmer.asset
+  uploadId: 957850

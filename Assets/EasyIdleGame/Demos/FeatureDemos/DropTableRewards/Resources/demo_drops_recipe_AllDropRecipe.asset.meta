@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8c2ace14a47b4f8e941934a9652a7c72
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/DropTableRewards/Resources/demo_drops_recipe_AllDropRecipe.asset
+  uploadId: 957850

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 060695d8292342b42a269bdb2a167ee4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/SimpleExpScene/Resources/New
+    Shop Item.asset
+  uploadId: 957850

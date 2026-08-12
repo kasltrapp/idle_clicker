@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4cb9d186e56340e587ac19e46af08931
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/LocationTravel/Resources/demo_locations_location_ExpeditionLocation.asset
+  uploadId: 957850

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f5631b46a72044c943eee92850065b, type: 3}
+  m_Name: demo_progress_custom_stat_QuestCompletions
+  m_EditorClassIdentifier: 
+  _customStatComment: 
+  metadata:
+    name: Custom stat - quest completions
+    icon: {fileID: 0}
+    iconString: '[Quest]'
+    model: {fileID: 0}
+    description: Incremented by gameplay code and checked by the achievement, so progress can come from arbitrary game actions.

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: Experimental_Farmer
+  m_EditorClassIdentifier: 
+  businessName: Farmer
+  businessGroup: 
+  image: {fileID: 21300000, guid: bbbaef02f2c52134988021d652ed7fde, type: 3}
+  description: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 268274d508b48c744af33a8895c94424, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 708749695021ebc45bf4107e9edc8365, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
+  outputs:
+  - businessOutput: {fileID: 0}
+    currencyOutput: {fileID: 11400000, guid: 268274d508b48c744af33a8895c94424, type: 2}
+    outputAmount:
+      Mantissa: 1
+      Exponent: 0
+  locks: []
+  unlockOnlyOnce: 1
+  timeToProduce: 1
+  manager: {fileID: 11400000, guid: 289831f3518ae794194c61fd5720eae1, type: 2}
+  autoProduce: 0
+  firstLevelXp: 1000
+  incrementMultiplier: 2
+  xpsAddPerPurchase: 1
+  levelUpReward:
+  - businessOutput: {fileID: 0}
+    currencyOutput: {fileID: 11400000, guid: d53bbdae82a808a47b876e3e4071f96b, type: 2}
+    outputAmount:
+      Mantissa: 8
+      Exponent: 0
+  scaleWithLevel: 0
+  productionCost: []
+  scaleProductionCostWithAmount: 0

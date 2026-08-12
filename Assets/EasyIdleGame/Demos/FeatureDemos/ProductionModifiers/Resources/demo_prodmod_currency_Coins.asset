@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f83c352be37914584bac85e9187cf0, type: 3}
+  m_Name: demo_prodmod_currency_Coins
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Currency
+  _currencyComment:
+  metadata:
+    name: Coins
+    icon: {fileID: 0}
+    iconString: $
+    model: {fileID: 0}
+    description: Pays for additional factory copies and receives both the factory's
+      fixed table output and the registered modifier's bonus output.
+  image: {fileID: 0}
+  currencyName: Coins
+  iconString: $
+  description: Pays for additional factory copies and receives both the factory's
+    fixed table output and the registered modifier's bonus output.
+  metadataLegacySyncState:
+    name: Coins
+    icon: {fileID: 0}
+    iconString: $
+    model: {fileID: 0}
+    description: Pays for additional factory copies and receives both the factory's
+      fixed table output and the registered modifier's bonus output.
+  currencyGroups: []
+  maxAmount:
+    Mantissa: -1
+    Exponent: 0

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6712aa8ebb6419e438ff4b0799c937e7
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/Layout/Footer.prefab
+  uploadId: 957850

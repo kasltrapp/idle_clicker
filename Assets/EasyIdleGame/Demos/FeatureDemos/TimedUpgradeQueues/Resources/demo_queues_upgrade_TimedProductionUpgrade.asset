@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c038fa00041e6f14fbee7995a369c608, type: 3}
+  m_Name: demo_queues_upgrade_TimedProductionUpgrade
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Upgrade
+  _upgradeComment: 
+  metadata:
+    name: Timed production upgrade
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: A delayed x2 production upgrade. Buy it in Parallel and Sequential
+      modes to compare pending batches.
+  icon: {fileID: 0}
+  upgradeName: Timed production upgrade
+  description: A delayed x2 production upgrade. Buy it in Parallel and Sequential
+    modes to compare pending batches.
+  metadataLegacySyncState:
+    name: Timed production upgrade
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: A delayed x2 production upgrade. Buy it in Parallel and Sequential
+      modes to compare pending batches.
+  group: 
+  targetBusinessGroups: []
+  _upgradeEffectsComment: 
+  _upgradeEffectsInfo: 
+  upgrades:
+  - upgradeType: 0
+    value: 2
+  _overrideUpgradesComment: 
+  overrideUpgrades: []
+  _overrideUpgradeModifiersComment: 
+  overrideUpgradeModifiers: []
+  overrideUpgradeLevelMultiplier: 1.2
+  upgradeDurationInSeconds: 4
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: cf351fb8cb496b34aba7a5ebbefeabe4, type: 2}
+    inputAmount:
+      Mantissa: 3
+      Exponent: 1
+  maxBuyableAmount: 4
+  priceMultiplier_: 1
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 0

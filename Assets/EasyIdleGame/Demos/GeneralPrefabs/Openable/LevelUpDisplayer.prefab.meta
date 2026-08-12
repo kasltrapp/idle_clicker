@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 98695721cbebd4d4d80963cd50e12383
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/GeneralPrefabs/Openable/LevelUpDisplayer.prefab
+  uploadId: 957850

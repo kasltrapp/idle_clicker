@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 504bc9e8bd8644498949bb2e433b7153
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/LocksAndBuyAmounts/Resources/demo_locks_business_group_CapacityGroup.asset
+  uploadId: 957850

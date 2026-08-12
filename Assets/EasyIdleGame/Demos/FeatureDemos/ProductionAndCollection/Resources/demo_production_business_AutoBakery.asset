@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
+  m_Name: demo_production_business_AutoBakery
+  m_EditorClassIdentifier: 
+  _businessComment: 
+  businessName: Auto producer - auto collects
+  image: {fileID: 0}
+  iconString: '[Bakery]'
+  model: {fileID: 0}
+  description: Starts and collects automatically, so its claim controls stay hidden while credits and occasional tickets enter the wallet.
+  businessGroup: 
+  businessGroups: []
+  maxAmount_:
+    Mantissa: -1
+    Exponent: 0
+  _maxBuyableAmountInfo: 
+  maxBuyableAmount:
+    Mantissa: -1
+    Exponent: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 85bc326018e141509a38f4e7cb7b5dc7, type: 2}
+    inputAmount:
+      Mantissa: 25
+      Exponent: 0
+  costMultiplier: 1.18
+  useGeometricBoughtAmount: 0
+  _productionComment: 
+  timeToProduce: 1.25
+  dropEvaluationMode: 1
+  autoProduce: 1
+  manager: {fileID: 0}
+  increaseProductionAmountAfterRoundEnd: 0
+  autoCollect: 1
+  _outputTablesInfo: 
+  outputTables:
+  - _dropTableComment: 
+    strategy: 0
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: 85bc326018e141509a38f4e7cb7b5dc7, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 5
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 11400000, guid: 07cebb3efaa9487ca480d31ed1890121, type: 2}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 0}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 0.35
+      weight: 1
+  outputs: []
+  productionCost: []
+  scaleProductionCostWithAmount: 0
+  allowPartialProductionCost: 0
+  consumeOnProduce: 0
+  ignoredMultipliers: 0
+  _locksComment: 
+  unlockOnlyOnce: 1
+  _locksInfo: 
+  locks: []
+  upperLocks: []
+  xpsAddPerPurchaseToPlayer: 0
+  levelupData:
+    levelRewards: []
+    eachLevelReward: []
+    scaleEachLevelReward: 0
+    descriptions: []
+  scaleWithLevel: 0
+  firstLevelCopies: 10
+  incrementMultiplier: 2
+  autoLevelUp: 1
+  _upgradeLevelsComment: 
+  upgradeLevels: []
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2

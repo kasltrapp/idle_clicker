@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ecbcc7d56a095b44185a1c822a66bfdb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/_ExperimentalScenes/SimpleExpScene/Resources/exp_MultiplierBoost1.asset
+  uploadId: 957850

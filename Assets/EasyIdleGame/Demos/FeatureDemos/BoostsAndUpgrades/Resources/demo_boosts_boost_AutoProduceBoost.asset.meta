@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 479c987f3f6d42398ce0a5c7efa03d2e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/BoostsAndUpgrades/Resources/demo_boosts_boost_AutoProduceBoost.asset
+  uploadId: 957850

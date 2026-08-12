@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2062dd5afabb57cbe00afad46eba8105
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/CustomSaveAndAutosave/CustomSaveAndAutosave.unity
+  uploadId: 957850

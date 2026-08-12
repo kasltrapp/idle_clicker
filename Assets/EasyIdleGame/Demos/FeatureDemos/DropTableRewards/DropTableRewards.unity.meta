@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0082917e913f496d85971274a117f56d
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/DropTableRewards/DropTableRewards.unity
+  uploadId: 957850

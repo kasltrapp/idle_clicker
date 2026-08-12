@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eca863a1dc82f8044a6d8648778a0799
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/01_BasicFlow/BasicFlow.unity
+  uploadId: 957850

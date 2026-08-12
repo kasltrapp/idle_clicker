@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e31ec1fb1d8742cc96b0703745ecd103
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/LocksAndBuyAmounts/Resources/demo_locks_currency_group_WalletGroup.asset
+  uploadId: 957850

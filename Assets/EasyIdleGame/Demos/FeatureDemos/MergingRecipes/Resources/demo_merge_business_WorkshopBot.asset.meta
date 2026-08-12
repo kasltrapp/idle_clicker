@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 11cf68a5a23747668e9fb969fd5919c9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Demos/FeatureDemos/MergingRecipes/Resources/demo_merge_business_WorkshopBot.asset
+  uploadId: 957850

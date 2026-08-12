@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dc6ab51a765d4764dab31d6fa0b31f96
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 300451
+  packageName: 'EasyIdleGame: Complete Idle Clicker Game Toolkit'
+  packageVersion: 2.0.0
+  assetPath: Assets/EasyIdleGame/Scripts_Editor/Inspectors/Drawers/ButtonHolderDrawer.cs
+  uploadId: 957850

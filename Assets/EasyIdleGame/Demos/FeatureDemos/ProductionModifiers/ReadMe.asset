@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d79210d2564f739f9a05a738b8a1d3, type: 3}
+  m_Name: ReadMe
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Demos.DemoSceneReadme
+  data:
+    title: Production Modifiers
+    summary: A scene-level production modifier adds bonus Coins based on owned factory
+      copies. The factory itself has a fixed output table, making the modifier's effect
+      easy to compare in round, per-second, active, and offline calculations.
+    resourcePrefix: demo_prodmod
+    sections:
+    - heading: Project setup
+      body: Add a ProductionModifierManager to the scene manager GameObject and assign
+        modifier assets to its list. The manager registers them while it is enabled
+        and unregisters them when disabled, so stale static registrations cannot leak
+        into other scenes.
+    - heading: What to try
+      body: Start with the modifier enabled. Twelve factories produce 96 base Coins
+        per round (12 x 8), while floor(12 / 3) x 25 adds 100 bonus Coins, for 196
+        total or 49 Coins/second over the four-second round. Disable the bonus to
+        see the fixed base remain at 96 Coins/round and 24 Coins/second. Press Start
+        all to populate the current-active rate, use Buy +3 to reach 15 factories,
+        then use the pre-granted Offline automation boost before comparing offline
+        profit with the modifier enabled and disabled. The factory remains manual
+        until that temporary boost is activated.
+    - heading: Caveats
+      body: The Business asset does not scale itself; the ProductionModifierManager
+        owns registration for the separate modifier asset. Modifiers receive calculated
+        output lists and must not mutate shared output assets. Order matters when several
+        modifiers change the same output; lower priority runs earlier. The built-in
+        modifier can target currency, business, boost, or manager output. Offline
+        profit includes only businesses currently eligible for automatic production;
+        this demo supplies that eligibility with a temporary boost instead of enabling
+        Auto Produce on the Business asset.
