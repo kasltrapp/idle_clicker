@@ -6,6 +6,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]serSettings/
+.plastic/
 [Mm]emoryCaptures/
 
 # Visual Studio / Rider / VS Code cache
