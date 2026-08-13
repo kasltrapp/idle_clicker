@@ -23,12 +23,12 @@ Single source of truth for every persisted asset name, category, and unlock orde
 
 ## Locations (Platforms) — v1 launch order
 
-**⚠️ NAMING FLAG (not resolved by this pass):** a rename task described "Clipz has been renamed to QuickTok throughout" as already-done fact. Checked directly — it is not. `ClipzPlatform.asset`, `ClipzContentGroup.asset`, and references in `Main.unity` all still use the Clipz name, unchanged. This section still reflects that unrenamed state. Flagging per instruction rather than renaming silently — Location/BusinessGroup renames were not part of the approved exception for this pass (only the 8 Businesses + 5 Managers below were).
+**⚠️ NAMING FLAG — RESOLVED this pass:** an earlier task described "Clipz has been renamed to QuickTok throughout" as already-done fact; that was checked directly and found false at the time (the Location asset was still `ClipzPlatform`, unrenamed). A later task explicitly approved a one-time GUID-preserving rename of that Location asset (same approved exception as the earlier Business/Manager rename batch — no player has ever loaded a save). That rename has now been performed: `ClipzPlatform.asset` → `QuickTokPlatform.asset` (GUID unchanged: `a3f69297faff01c40871ff63deeead96`; `metadata.name` updated from `"Clipz (short-form)"` to `"QuickTok"`). All 5 QuickTok Business assets' `location` field references re-verified pointing at the same GUID post-rename. `ClipzContentGroup.asset` (a BusinessGroup, separate asset type) was **not** renamed — out of scope for this exception, not requested. The bottom-tab UI button for this platform (`ClipzTab`) was inspected directly and found to have **zero persistent `onClick` listeners** — it was never wired to anything, so there was no existing binding to break or preserve.
 
 | Asset name | Display name | Unlock cost | Default active? | Status |
 |---|---|---|---|---|
 | `StarterFeed` | Your First Post | Free | Yes | ✅ |
-| `ClipzPlatform` | Clipz | 500 `Followers` | No | ✅ — name NOT yet updated to QuickTok, see flag above |
+| `QuickTokPlatform` (was `ClipzPlatform`, renamed this pass) | QuickTok | 500 `Followers`, plus unlock **Lock**: level ≥ 12 AND own 1× `StoryFeed` | No | ✅ |
 | `ChroniclePlatform` | The Chronicle | 5,000 `Cash` | No | ✅ |
 
 Brand/merch platform: post-launch, not yet designed.
@@ -51,13 +51,21 @@ Brand/merch platform: post-launch, not yet designed.
 | `EngagementFarming` (was `RingLightSetup`) | 100 `Followers` | 8 `Followers` | 20s | `FarmerBob` (new — confirmed had no manager before this pass) | own 20× `StoryFeed` AND level ≥ 14 | costMultiplier 1.15. **⚠️ Display name "Engagement Farming" confirmed text-overflowing in `UI_BusinessRow.prefab`'s NameText slot** (pre-existing flag, not resolved by this pass) |
 | `VerifiedStatus` (new tier 5, capstone) | 500 `Followers` | 20 `Followers` | 45s | `ChuckVerifiington` | own 25× `EngagementFarming` AND level ≥ 24 | costMultiplier 1.15. **Phase 6 placeholder numbers** — highest cost/output on the platform, ~5x/2.5x EngagementFarming's cost/output as capstone scaling |
 
-### ClipzPlatform — ✅ all built (Location name itself not yet renamed — see flag above)
+### QuickTokPlatform (was `ClipzPlatform`, renamed this pass) — ✅ all 5 tiers built (Batch B complete)
 
-| Asset name | Base cost | Produces | Time | Notes |
-|---|---|---|---|---|
-| `TrendChase` (name already correct, unchanged) | 50 `Cash` | 12 `Followers` | 10s | costMultiplier 1.15, manager `DanaTrent`. Display name was stale ("Chase a Trend") — corrected to "Trend Chase" as part of this pass. |
-| `ReactionContent` (was `DuetFarm`) | 300 `Cash` | 6 `Cash` | 25s | costMultiplier 1.15, manager `ReggieReactington`, production input: 20 `Followers`/round |
-| `ViralChallenge` (was `ViralAttempt`) | 1,500 `Cash` | 40 `Followers` + 10 `Cash` (guaranteed, `DropStrategy.All`) | 60s | costMultiplier 1.15, no manager, bonus drop-table output deferred to Phase 6 balancing |
+**⚠️ NAMING FLAG — RESOLVED:** a Batch B task referred to this platform as "QuickTok" throughout, but at that time no asset anywhere renamed `ClipzPlatform` to that name. A later task explicitly approved the Location rename; it is now done (see the flag at the top of the Locations section above). Section header updated to match.
+
+**Level Progression data — confirmed against the locked table.** At Batch B build time, no Level Progression table existed anywhere in this project to check the platform-unlock condition against; the value used (level ≥ 12 AND own 1× `StoryFeed`) was taken from the task's own explicit instruction text with no independent source to verify against. The Level Progression table has since been added to this doc (see the new section below) and lists Level 12 = "QuickTok platform unlocks (Trend Chase), Own 1x Story Feed" — **this matches exactly** what was built. No drift found.
+
+**Locks wired this pass:** same compound businessLock+playerLevelLock AND pattern as Yourgram. `TrendChase` (platform entry point) verified to have no ownership lock — unchanged. `ReactionContent` had no existing lock to replace (checked the actual asset first, per instructions — it was empty, not populated as the task's phrasing implied) — the new compound lock was simply added fresh. The `QuickTokPlatform` Location's own unlock **Lock** (level+ownership gate) is separate from and additional to its existing 500-`Followers` unlock **cost** (currency price) — both fields left independently intact.
+
+| Asset name | Base cost | Produces | Time | Manager | Lock | Notes |
+|---|---|---|---|---|---|---|
+| `TrendChase` (name already correct, unchanged) | 50 `Cash` | 12 `Followers` | 10s | `DanaTrent` | none (platform entry point, verified) | costMultiplier 1.15 |
+| `CollabFarming` (new tier 2) | 120 `Cash` | 20 `Followers` | 15s | `CocoLabor` (new) | own 10× `TrendChase` AND level ≥ 18 | costMultiplier 1.15. **Phase 6 placeholder numbers (my own inference)** — cost geometrically interpolated between TrendChase (50) and ReactionContent (300); produces Followers (matching the closer tier) rather than Cash |
+| `ReactionContent` (was `DuetFarm`) | 300 `Cash` | 6 `Cash` | 25s | `ReggieReactington` (unchanged) | own 15× `CollabFarming` AND level ≥ 28 | costMultiplier 1.15, production input: 20 `Followers`/round (unchanged) |
+| `AlgorithmBaiting` (new tier 4) | 700 `Cash` | 15 `Cash` | 40s | `AlGorithm` (new) | own 20× `ReactionContent` AND level ≥ 42 | costMultiplier 1.15. **Phase 6 placeholder numbers** — cost geometrically interpolated between ReactionContent (300) and ViralChallenge (1,500) |
+| `ViralChallenge` (was `ViralAttempt`, QuickTok capstone) | 1,500 `Cash` | 40 `Followers` + 10 `Cash` (guaranteed, `DropStrategy.All`) | 60s | `ValIral` (new — confirmed had no manager before this pass, checked the actual asset rather than trusting the earlier build notes) | own 25× `AlgorithmBaiting` AND level ≥ 65 | costMultiplier 1.15, bonus drop-table output deferred to Phase 6 balancing (unchanged) |
 
 ### ChroniclePlatform — ✅ all built
 
@@ -72,22 +80,25 @@ Brand/merch platform: post-launch, not yet designed.
 |---|---|---|---|
 | `ClipzContentGroup` | `TrendChase`, `ReactionContent` (was `DuetFarm`) | Scoping for speed-type upgrades (contextual filters don't work for speed effects; group targeting does) | `Resources/BusinessGroups/` |
 
-## Managers — ✅ 8 built and functional (auto-leveling from duplicates is native, confirmed)
+## Managers — ✅ 11 built and functional (auto-leveling from duplicates is native, confirmed)
 
 **Renamed** (same approved one-time exception as the Businesses above). Old names kept in parentheses.
 
 | Asset name | Automates | autoProduceOnLevel | autoCollectOnLevel | Rarity |
 |---|---|---|---|---|
 | `RonnyRingo` (was `GhostwriterManager`) | `FirstPost` | 0 | 0 | Common |
-| `FayeFilterton` (new) | `SelfieSession` | 0 | 0 | Common |
+| `FayeFilterton` | `SelfieSession` | 0 | 0 | Common |
 | `ToriSteller` (was `SocialMediaManager`) | `StoryFeed` | 1 | 0 | Common |
-| `FarmerBob` (new) | `EngagementFarming` | 0 | 0 | Common |
-| `ChuckVerifiington` (new) | `VerifiedStatus` | 0 | 0 | Common |
+| `FarmerBob` | `EngagementFarming` | 0 | 0 | Common |
+| `ChuckVerifiington` | `VerifiedStatus` | 0 | 0 | Common |
 | `DanaTrent` (was `EditorManager`) | `TrendChase` | 0 | 0 | Common |
+| `CocoLabor` (new) | `CollabFarming` | 0 | 0 | Common |
 | `ReggieReactington` (was `TalentAgentManager`) | `ReactionContent` | 2 | 1 | Common |
+| `AlGorithm` (new) | `AlgorithmBaiting` | 0 | 0 | Common |
+| `ValIral` (new — confirmed manager-less before this pass) | `ViralChallenge` | 0 | 0 | Common |
 | `HattieTakerson` (was `PublicistManager`) | `HotTake` | 0 | 0 | Common |
 
-Every manager-to-business assignment above was re-verified by raw GUID cross-reference (not name matching) directly against each `Business.manager` field — all 8 confirmed correct, no mismatches found. `FarmerBob`/`FayeFilterton`/`ChuckVerifiington` follow the exact same cost/lock/upgrade pattern as the 5 pre-existing Common managers (free acquisition — `cost: []` — per the Capsule-based acquisition model; default `passiveBoosts` = speed ×2, Manager.cs's own field default, left unchanged as a Phase 6 placeholder like the other 5).
+Every manager-to-business assignment above was re-verified by raw GUID cross-reference (not name matching) directly against each `Business.manager` field — all 11 confirmed correct, no mismatches found. All new managers follow the exact same cost/lock/upgrade pattern as the pre-existing Common managers (free acquisition — `cost: []` — per the Capsule-based acquisition model; default `passiveBoosts` = speed ×2, Manager.cs's own field default, left unchanged as a Phase 6 placeholder like the others).
 
 **Rarity — ✅ system built.** `Rarity` enum (`InfluencerRise.Managers`, `Assets/InfluencerRise/Scripts/Managers/Rarity.cs`): `Common`/`Rare`/`Epic`/`Mythic`. Assigned via a companion `ManagerRarity` ScriptableObject per Manager (`Assets/InfluencerRise/Scripts/Managers/ManagerRarity.cs`, one instance per Manager under `Resources/ManagerRarities/`, also renamed this pass: `RonnyRingoRarity`, `ToriStellerRarity`, `DanaTrentRarity`, `ReggieReactingtonRarity`, `HattieTakersonRarity`) rather than a field on `Manager` itself or a subclass — `Manager.cs` is vendor code and the 5 assets above already exist as plain `Manager`-typed, name-locked assets, so re-typing them via subclassing was ruled out as unnecessarily invasive. `Manager.managerGroups` was also ruled out as an attachment point since it's an active functional dependency of `PrestigeManager.excludedManagerGroups`. All 5 Managers above are currently assigned **Common** — a placeholder, not a design decision on which managers should be rarer; that's a future task once actual Rare/Epic/Mythic manager content is designed.
 
@@ -155,6 +166,44 @@ Player Cosmetics (avatar unlocks via achievements/progress) — deferred to V1.1
 
 `PlayerStats.levelupData` (`LevelDataHolder`) supports both exact-level (`levelRewards`) and repeating/divisor-based (`eachLevelReward`, optional `scaleEachLevelReward`) rewards, using the same `Reward` → `DropTable` → `Output` system as everything else. **To be configured**: grant `CloutCoin` on level-up (primary intended source of free premium currency, per monetization design) — exact cadence/amounts TBD during Phase 3 build.
 
+## Level Progression (locked)
+
+| Level | Unlocks | Type | Ownership gate |
+|---|---|---|---|
+| 1 | Yourgram: First Post | Business | Free, no gate |
+| 3 | Yourgram: Selfie Session | Business | Own 10x First Post |
+| 7 | Yourgram: Story Feed | Business | Own 15x Selfie Session |
+| 12 | QuickTok platform unlocks (Trend Chase) | Platform | Own 1x Story Feed |
+| 14 | Yourgram: Engagement Farming | Business | Own 20x Story Feed |
+| 18 | QuickTok: Collab Farming | Business | Own 10x Trend Chase |
+| 24 | Yourgram: Verified Status (capstone) | Business | Own 25x Engagement Farming |
+| 28 | QuickTok: Reaction Content | Business | Own 15x Collab Farming |
+| 34 | Broadcast platform unlocks (Hot Take) | Platform | Own 1x Reaction Content |
+| 42 | QuickTok: Algorithm Baiting | Business | Own 20x Reaction Content |
+| 55 | Broadcast: Unboxing Haul | Business | Own 10x Hot Take |
+| 65 | QuickTok: Viral Challenge (capstone) | Business | Own 25x Algorithm Baiting |
+| 80 | Broadcast: Streaming | Business | Own 15x Unboxing Haul |
+| 110 | Broadcast: Sponsor Deals | Business | Own 20x Streaming |
+| 150 | Broadcast: Own Brand (capstone, end of v1 content) | Business | Own 25x Sponsor Deals |
+
+All levels grant a Level-Up Reward (CloutCoin) regardless of whether new content unlocks. All numbers are Phase 6 placeholders; the shape/order is locked.
+
+**Cross-checked against Batch A/B (built content, levels 1–65) via fresh reads of every asset's `locks` field on 2026-08-14 — confirmed no drift:**
+
+| Level | Table says | Asset `locks` field (actual) | Match? |
+|---|---|---|---|
+| 3 | Own 10x First Post | `SelfieSession`: OwnershipLock(FirstPost,10) + LevelLock(3) | ✅ |
+| 7 | Own 15x Selfie Session | `StoryFeed`: OwnershipLock(SelfieSession,15) + LevelLock(7) | ✅ |
+| 12 | Own 1x Story Feed | `QuickTokPlatform`: LevelLock(12) + OwnershipLock(StoryFeed,1) | ✅ |
+| 14 | Own 20x Story Feed | `EngagementFarming`: OwnershipLock(StoryFeed,20) + LevelLock(14) | ✅ |
+| 18 | Own 10x Trend Chase | `CollabFarming`: OwnershipLock(TrendChase,10) + LevelLock(18) | ✅ |
+| 24 | Own 25x Engagement Farming | `VerifiedStatus`: OwnershipLock(EngagementFarming,25) + LevelLock(24) | ✅ |
+| 28 | Own 15x Collab Farming | `ReactionContent`: OwnershipLock(CollabFarming,15) + LevelLock(28) | ✅ |
+| 42 | Own 20x Reaction Content | `AlgorithmBaiting`: OwnershipLock(ReactionContent,20) + LevelLock(42) | ✅ |
+| 65 | Own 25x Algorithm Baiting | `ViralChallenge`: OwnershipLock(AlgorithmBaiting,25) + LevelLock(65) | ✅ |
+
+Levels 34/55/80/110/150 (Broadcast platform) are not yet built — Batch C, pending.
+
 ## First-hour pacing target
 
 | Milestone | Target time |
@@ -162,7 +211,7 @@ Player Cosmetics (avatar unlocks via achievements/progress) — deferred to V1.1
 | First `FirstPost` purchase (was `SelfieSession`) | Immediate |
 | First `StoryFeed` unlock (was `StoryPost`) | ~2 min |
 | First Manager owned | ~5 min |
-| `ClipzPlatform` unlock | ~15 min |
+| `QuickTokPlatform` unlock | ~15 min |
 | First Boost use | ~20 min |
 | First Shop interaction | ~25 min |
 | `ChroniclePlatform` unlock | ~45–60 min |

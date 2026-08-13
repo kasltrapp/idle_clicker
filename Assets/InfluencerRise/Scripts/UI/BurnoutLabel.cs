@@ -31,7 +31,7 @@ namespace InfluencerRise.UI
         {
             if (burnoutStat == null || text == null || PlayerStats.Instance == null) return;
 
-            text.text = $"Burnout: {PlayerStats.Instance.GetStat(burnoutStat)}/100";
+            text.text = $"{PlayerStats.Instance.GetStat(burnoutStat)}/100";
         }
     }
 }

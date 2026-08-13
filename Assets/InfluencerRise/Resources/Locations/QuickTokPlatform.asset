@@ -10,18 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d1649b1316002409b97c919ead037c, type: 3}
-  m_Name: ClipzPlatform
+  m_Name: QuickTokPlatform
   m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Location
   _locationComment: 
   metadata:
-    name: Clipz (short-form)
+    name: QuickTok
     icon: {fileID: 0}
     iconString: 
     model: {fileID: 0}
     description: 
   locationGroups: []
   _locksInfo: 
-  locks: []
+  locks:
+  - businessLock: {fileID: 0}
+    businessUpgradeLevelLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 1
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 1.2
+      Exponent: 1
+  - businessLock: {fileID: 11400000, guid: 91bd664fe3adc12429386fb837c8a92e, type: 2}
+    businessUpgradeLevelLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 1
+      Exponent: 0
   unlockOnlyOnce: 1
   sortOrder: 0
   _costInfo: 

@@ -73,7 +73,7 @@ MonoBehaviour:
   timeToProduce: 60
   dropEvaluationMode: 0
   autoProduce: 0
-  manager: {fileID: 0}
+  manager: {fileID: 11400000, guid: 12cf71ceea917a44b9071dbee074815f, type: 2}
   productionRoundMode: 0
   increaseProductionAmountAfterRoundEnd: 0
   syncedIncreaseProductionAmountAfterRoundEnd: 0
@@ -121,7 +121,35 @@ MonoBehaviour:
   _locksComment: 
   unlockOnlyOnce: 1
   _locksInfo: 
-  locks: []
+  locks:
+  - businessLock: {fileID: 11400000, guid: 28683eb8f4f5b96488f905e3ee88ac90, type: 2}
+    businessUpgradeLevelLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 0
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 2.5
+      Exponent: 1
+  - businessLock: {fileID: 0}
+    businessUpgradeLevelLock: {fileID: 0}
+    currencyLock: {fileID: 0}
+    playerLevelLock: 1
+    customStatLock: {fileID: 0}
+    prestigeLock: 0
+    locationLock: {fileID: 0}
+    businessGroupLock: {fileID: 0}
+    currencyGroupLock: {fileID: 0}
+    upgradeGroupLock: {fileID: 0}
+    amountType: 0
+    inputAmount:
+      Mantissa: 6.5
+      Exponent: 1
   upperLocks: []
   xpsAddPerPurchaseToPlayer: 1
   levelupData:

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
-  m_Name: ReactionContent
+  m_Name: CollabFarming
   m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Business
   _businessComment: 
   buySound:
@@ -34,26 +34,28 @@ MonoBehaviour:
     volume: 1
     category: 0
   metadata:
-    name: Reaction Content
+    name: Collab Farming
     icon: {fileID: 0}
-    iconString: 
+    iconString: COLLAB FARMING
     model: {fileID: 0}
-    description: 
+    description: Two creators, one video, infinite cross-promotion. Neither of you
+      actually likes the other, but the algorithm doesn't know that.
   location: {fileID: 11400000, guid: a3f69297faff01c40871ff63deeead96, type: 2}
-  businessName: Reaction Content
+  businessName: Collab Farming
   image: {fileID: 0}
-  iconString: 
+  iconString: COLLAB FARMING
   model: {fileID: 0}
-  description: 
+  description: Two creators, one video, infinite cross-promotion. Neither of you
+    actually likes the other, but the algorithm doesn't know that.
   metadataLegacySyncState:
-    name: Reaction Content
+    name: Collab Farming
     icon: {fileID: 0}
-    iconString: 
+    iconString: COLLAB FARMING
     model: {fileID: 0}
-    description: 
+    description: Two creators, one video, infinite cross-promotion. Neither of you
+      actually likes the other, but the algorithm doesn't know that.
   businessGroup: 
-  businessGroups:
-  - {fileID: 11400000, guid: df29fc3e0ed8d1d45be896495d12a47c, type: 2}
+  businessGroups: []
   maxAmount_:
     Mantissa: -1
     Exponent: 0
@@ -66,15 +68,15 @@ MonoBehaviour:
   - businessInput: {fileID: 0}
     currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
     inputAmount:
-      Mantissa: 3
+      Mantissa: 1.2
       Exponent: 2
   costMultiplier: 1.15
   useGeometricBoughtAmount: 0
   _productionComment: 
-  timeToProduce: 25
+  timeToProduce: 15
   dropEvaluationMode: 0
   autoProduce: 0
-  manager: {fileID: 11400000, guid: 7b1203887147ef848bb21ee35e96af98, type: 2}
+  manager: {fileID: 11400000, guid: e86a4d0a06283fc47b42b425cce8759c, type: 2}
   productionRoundMode: 0
   increaseProductionAmountAfterRoundEnd: 0
   syncedIncreaseProductionAmountAfterRoundEnd: 0
@@ -88,24 +90,19 @@ MonoBehaviour:
     totalDropAmount: 1
     outputs:
     - businessOutput: {fileID: 0}
-      currencyOutput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+      currencyOutput: {fileID: 11400000, guid: f2192e57c8e62f4459feced8c52f4e80, type: 2}
       boostOutput: {fileID: 0}
       managerOutput: {fileID: 0}
       outputAmount:
-        Mantissa: 6
-        Exponent: 0
+        Mantissa: 2
+        Exponent: 1
       outputMaxAmount:
         Mantissa: -1
         Exponent: 0
       dropChance: 1
       weight: 1
   outputs: []
-  productionCost:
-  - businessInput: {fileID: 0}
-    currencyInput: {fileID: 11400000, guid: f2192e57c8e62f4459feced8c52f4e80, type: 2}
-    inputAmount:
-      Mantissa: 2
-      Exponent: 1
+  productionCost: []
   scaleProductionCostWithAmount: 0
   allowPartialProductionCost: 0
   consumeOnProduce: 0
@@ -116,7 +113,7 @@ MonoBehaviour:
   unlockOnlyOnce: 1
   _locksInfo: 
   locks:
-  - businessLock: {fileID: 11400000, guid: 6aa7636182e35ab41a91986e614ec502, type: 2}
+  - businessLock: {fileID: 11400000, guid: 677795571af828c428fbfa762abfc4a7, type: 2}
     businessUpgradeLevelLock: {fileID: 0}
     currencyLock: {fileID: 0}
     playerLevelLock: 0
@@ -128,7 +125,7 @@ MonoBehaviour:
     upgradeGroupLock: {fileID: 0}
     amountType: 0
     inputAmount:
-      Mantissa: 1.5
+      Mantissa: 1
       Exponent: 1
   - businessLock: {fileID: 0}
     businessUpgradeLevelLock: {fileID: 0}
@@ -142,7 +139,7 @@ MonoBehaviour:
     upgradeGroupLock: {fileID: 0}
     amountType: 0
     inputAmount:
-      Mantissa: 2.8
+      Mantissa: 1.8
       Exponent: 1
   upperLocks: []
   xpsAddPerPurchaseToPlayer: 1

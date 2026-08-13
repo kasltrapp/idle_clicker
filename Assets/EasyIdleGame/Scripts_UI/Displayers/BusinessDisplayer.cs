@@ -113,7 +113,7 @@ namespace EasyIdleGame.UI
             base.Redraw_Default();
             if (business == null) return;
 
-            UpdateText(buyButton, $"Buy 0x {business.GetDisplayName()}");
+            UpdateText(buyButton, $"Buy 1x {business.GetDisplayName()}");
             (this as IMetadataDisplayer).Redraw_Metadata(business.GetEffectiveMetadata(null));
 
             UpdateText(productionPerSecondText, business.outputs.Count != 0 ? "0 per second" : "This business has no outputs");
@@ -124,7 +124,7 @@ namespace EasyIdleGame.UI
         {
             base.Redraw_Default_Empty();
 
-            UpdateText(buyButton, $"Buy 0x Business");
+            UpdateText(buyButton, $"Buy 1x Business");
 
             UpdateText(productionPerSecondText, "outputs per second");
             UpdateText(amountText, "0");
