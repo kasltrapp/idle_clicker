@@ -1,140 +1,139 @@
 # Economy Schema — Certified Aura: Idle Influencer Tycoon
 
-This is the single source of truth for every persisted asset name, its category, and its unlock order. Names here are locked once created in the project (see CLAUDE.md Hard Rule #1). Numbers are starting points for playtesting, not final balance.
+Single source of truth for every persisted asset name, category, and unlock order. Names are locked once created (CLAUDE.md Hard Rule #1). Numbers are playtesting placeholders, not final balance, unless noted otherwise.
+
+**Build status: all entries below marked ✅ are created and verified in the project. Entries marked 🔲 are designed but not yet built.**
 
 ---
 
 ## Currencies
 
-| Asset name | Purpose | Cap | Reset on Rebrand? |
-|---|---|---|---|
-| `Followers` | Primary production currency, most Business costs | Uncapped | Yes |
-| `Cash` | Secondary currency, Upgrades/Managers/Shop | Uncapped | Yes |
-| `Aura` | Prestige currency, earned only on Rebrand | Uncapped | **No — excluded, persists forever** |
+| Asset name | Purpose | Cap | Reset on Rebrand? | Status |
+|---|---|---|---|---|
+| `Followers` | Primary production currency | Uncapped | Yes | ✅ |
+| `Cash` | Secondary currency | Uncapped | Yes | ✅ |
+| `Aura` | Prestige currency, earned only on Rebrand | Uncapped | No — excluded | ✅ |
+| `CloutCoin` | Premium currency — earned via level-up rewards, purchasable via IAP, spent on Manager Capsules | Uncapped | No — excluded (same treatment as Aura) | 🔲 |
 
-## Custom Stat (not a Currency)
+## Custom Stat
 
-| Asset name | Purpose | Range | Reset on Rebrand? |
-|---|---|---|---|
-| `Burnout` | Rises with active production; reduces output above threshold; lowered by self-care Shop items or a slow passive decay | 0–100 | Yes, resets to 0 |
-
-**Burnout implementation note:** engine has no built-in auto-decay ticker for a CustomStat (confirmed in EngineCapabilities.md). Needs one small script — a `MonoBehaviour` calling `PlayerStats.IncrementStat(Burnout, +amount)` on production completion, and a `ProductionOutputModifierAsset` (a supported extension point, not custom-from-scratch) that reduces output when `Burnout` crosses a threshold. This is the one place economy logic needs light custom code — everything else below is Inspector configuration.
-
----
+| Asset name | Purpose | Range | Reset on Rebrand? | Status |
+|---|---|---|---|---|
+| `Burnout` | Rises with production, decays passively, reduced by Spa Day Shop items | 0–100 | Yes, resets to 0 | ✅ decay/reset/shop-relief implemented (`BurnoutController.cs`); rise-on-production deferred to Phase 3 (design pass needed — rate per business, possibly tiered by platform) |
 
 ## Locations (Platforms) — v1 launch order
 
-| Asset name | Display name | Unlock cost | Default active? |
-|---|---|---|---|
-| `StarterFeed` | Your First Post | Free | Yes — `defaultActiveLocation` |
-| `ClipzPlatform` | Clipz (short-form) | 500 `Followers` | No |
-| `ChroniclePlatform` | The Chronicle (long-form) | 5,000 `Cash` | No |
+| Asset name | Display name | Unlock cost | Default active? | Status |
+|---|---|---|---|---|
+| `StarterFeed` | Your First Post | Free | Yes | ✅ |
+| `ClipzPlatform` | Clipz | 500 `Followers` | No | ✅ |
+| `ChroniclePlatform` | The Chronicle | 5,000 `Cash` | No | ✅ |
 
-Brand/merch platform is a **post-launch** addition — not created yet, don't build it for v1.
-
----
+Brand/merch platform: post-launch, not yet designed.
 
 ## Businesses
 
-## Business Groups
+### StarterFeed — ✅ all built
 
-| Asset name | Members | Purpose |
-|---|---|---|
-| `ClipzContentGroup` | `TrendChase`, `DuetFarm` | Scoping target for upgrades/boosts that should apply across ClipzPlatform's fast-content businesses without including ViralAttempt (which is intentionally higher-tier/separate pacing) |
+| Asset name | Base cost | Produces | Time | Notes |
+|---|---|---|---|---|
+| `SelfieSession` | 1 `Followers` | 1 `Followers` | 3s | costMultiplier 1.15, manager `GhostwriterManager` |
+| `StoryPost` | 15 `Followers` | 3 `Followers` | 8s | costMultiplier 1.15, manager `SocialMediaManager`, unlock: own 1x `SelfieSession`, upgradeCost 40 `Followers`/level, `autoUpgradeForFree` = false |
+| `RingLightSetup` | 100 `Followers` | 8 `Followers` | 20s | costMultiplier 1.15, unlock: `StoryPost` at upgrade level 2 (`businessUpgradeLevelLock`) |
 
-### StarterFeed platform
+### ClipzPlatform — ✅ all built
 
-| Asset name | Display name | Base cost | Produces | Time to produce | Notes |
-|---|---|---|---|---|---|
-| `SelfieSession` | Selfie Session | 1 `Followers` | 1 `Followers` | 3s | First business, tutorial pace, matches the pattern in `01-create-your-first-idle-game.md` |
-| `StoryPost` | Story Post | 15 `Followers` | 3 `Followers` | 8s | Unlocks after owning 1x `SelfieSession` (Lock) |`StoryPost` upgradeCost: 40 `Followers` per level (enables level 2, required by RingLightSetup's unlock lock)
-`StoryPost` — upgradeCostMultiplier and autoUpgradeForFree left at package defaults (2x geometric, auto-free-first-level = true); revisit during Phase 6 balancing.
-| `RingLightSetup` | Ring Light Setup | 100 `Followers` | 8 `Followers` | 20s | Unlocks after `StoryPost` level 2 |
+| Asset name | Base cost | Produces | Time | Notes |
+|---|---|---|---|---|
+| `TrendChase` | 50 `Cash` | 12 `Followers` | 10s | costMultiplier 1.15, manager `EditorManager` |
+| `DuetFarm` | 300 `Cash` | 6 `Cash` | 25s | costMultiplier 1.15, manager `TalentAgentManager`, production input: 20 `Followers`/round |
+| `ViralAttempt` | 1,500 `Cash` | 40 `Followers` + 10 `Cash` (guaranteed, `DropStrategy.All`) | 60s | costMultiplier 1.15, no manager, bonus drop-table output deferred to Phase 6 balancing |
 
-### ClipzPlatform
+### ChroniclePlatform — ✅ all built
 
-| Asset name | Display name | Base cost | Produces | Time to produce | Notes |
-|---|---|---|---|---|---|
-| `TrendChase` | Chase a Trend | 50 `Cash` | 12 `Followers` | 10s | First business on this platform |
-| `DuetFarm` | Duet Farm | 300 `Cash` | 6 `Cash` | 25s | Chains: consumes `Followers` as production input |
-| `ViralAttempt` | Manufactured Viral Moment | 1,500 `Cash` | 40 `Followers` + 10 `Cash` | 60s | High-value, slower, random drop table for bonus outputs |
-`DuetFarm` — production input: 20 Followers consumed per round (placeholder, tune in Phase 6)
-`ViralAttempt` — bonus drop-table output deferred to Phase 6 balancing; currently ships with only the two guaranteed outputs (40 Followers, 10 Cash)
+| Asset name | Base cost | Produces | Time | Notes |
+|---|---|---|---|---|
+| `LongformEssay` | 2,000 `Cash` | 25 `Cash` | 90s | costMultiplier 1.15, manager `PublicistManager`, upgradeCost 150 `Cash`/level, `autoUpgradeForFree` = false |
+| `SubscriberFunnel` | 8,000 `Cash` | 60 `Cash` | 180s | costMultiplier 1.15, no manager, unlock: `LongformEssay` at upgrade level 3 |
 
-### ChroniclePlatform
+## Business Groups — ✅ built
 
-| Asset name | Display name | Base cost | Produces | Time to produce | Notes |
-|---|---|---|---|---|---|
-| `LongformEssay` | Long-form Essay | 2,000 `Cash` | 25 `Cash` | 90s | First business on this platform |
-| `SubscriberFunnel` | Subscriber Funnel | 8,000 `Cash` | 60 `Cash` | 180s | Unlocks after `LongformEssay` level 3 |
-
-**Cost multiplier convention:** `1.15` per purchase for all Businesses above, per the standard idle-game curve — adjust globally later during balancing, don't hand-tune per business yet.
-
----
-
-## Managers (Team)
-
-| Asset name | Automates | `autoProduceOnLevel` | `autoCollectOnLevel` |
+| Asset name | Members | Purpose | Location |
 |---|---|---|---|
-| `GhostwriterManager` | `SelfieSession` | 0 (auto on purchase) | 0 |
-| `SocialMediaManager` | `StoryPost` | 1 | 0 |
-| `EditorManager` | `TrendChase` | 0 | 0 |
-| `TalentAgentManager` | `DuetFarm` | 2 | 1 |
-| `PublicistManager` | `LongformEssay` | 0 | 0 |
+| `ClipzContentGroup` | `TrendChase`, `DuetFarm` | Scoping for speed-type upgrades (contextual filters don't work for speed effects; group targeting does) | `Resources/BusinessGroups/` |
 
----
+## Managers — ✅ all 5 built and functional (auto-leveling from duplicates is native, confirmed)
 
-## Upgrades
+| Asset name | Automates | autoProduceOnLevel | autoCollectOnLevel | Rarity |
+|---|---|---|---|---|
+| `GhostwriterManager` | `SelfieSession` | 0 | 0 | Common |
+| `SocialMediaManager` | `StoryPost` | 1 | 0 | Common |
+| `EditorManager` | `TrendChase` | 0 | 0 | Common |
+| `TalentAgentManager` | `DuetFarm` | 2 | 1 | Common |
+| `PublicistManager` | `LongformEssay` | 0 | 0 | Common |
+
+**Rarity — ✅ system built.** `Rarity` enum (`InfluencerRise.Managers`, `Assets/InfluencerRise/Scripts/Managers/Rarity.cs`): `Common`/`Rare`/`Epic`/`Mythic`. Assigned via a companion `ManagerRarity` ScriptableObject per Manager (`Assets/InfluencerRise/Scripts/Managers/ManagerRarity.cs`, one instance per Manager under `Resources/ManagerRarities/`) rather than a field on `Manager` itself or a subclass — `Manager.cs` is vendor code and the 5 assets above already exist as plain `Manager`-typed, name-locked assets, so re-typing them via subclassing was ruled out as unnecessarily invasive. `Manager.managerGroups` was also ruled out as an attachment point since it's an active functional dependency of `PrestigeManager.excludedManagerGroups`. All 5 Managers above are currently assigned **Common** — a placeholder, not a design decision on which managers should be rarer; that's a future task once actual Rare/Epic/Mythic manager content is designed.
+
+**Manager acquisition model — REVISED (see Roadmap Phase 3):** originally planned as direct-currency purchase. Now redesigned per the AdVenture Communist reference: Managers are acquired via **weighted Capsule pulls** (Shop Items with `DropStrategy.WeightedRandom`, confirmed structurally supported by code inspection though not yet proven with a working example — proof-of-concept required before full build).
+
+## Upgrades — ✅ built (3 of 4 planned; TherapySessionUpgrade deferred)
 
 | Asset name | Type | Target | Effect |
 |---|---|---|---|
-| `BetterRingLight` | `production` | `SelfieSession` group | +25% output |
-| `FasterEditingSoftware` | `speed` | `TrendChase`, `DuetFarm` | -20% production time |
-| `BulkContentBatching` | `cost` | All Businesses | -10% purchase cost |
-| `TherapySessionUpgrade` | custom (Burnout reduction) | `Burnout` stat | -15 Burnout on purchase, one-time or repeatable — decide during Burnout script design |
+| `BetterRingLight` | production | `SelfieSession` (via contextual filter, no group needed) | +25% output |
+| `FasterEditingSoftware` | speed | `ClipzContentGroup` (group required — speed effects have no contextual path) | -20% production time |
+| `BulkContentBatching` | purchaseCost | All Businesses (global) | -10% purchase cost |
+| `TherapySessionUpgrade` | — | `Burnout` stat | -15 Burnout on purchase. **Deferred** — Upgrades can't target CustomStats; needs custom code same category as Burnout script. |
 
----
-
-## Boosts
+## Boosts — ✅ all built
 
 | Asset name | Type | Effect |
 |---|---|---|
-| `AllNighterBoost` | Time Skip | Skips 4 hours of production |
-| `ViralMomentBoost` | Production multiplier | 3x output, 5 min duration |
-| `AlgorithmPushBoost` | Speed multiplier | 2x speed, 10 min duration |
+| `AllNighterBoost` | TimeSkipBoost | Skips 4 hours of production |
+| `ViralMomentBoost` | GenericMultiplierBoost | 3x production, 5 min duration, global |
+| `AlgorithmPushBoost` | GenericMultiplierBoost | 2x speed, 10 min duration, global |
 
----
+## Shop Items — ✅ 7 built; Capsule tiers 🔲 pending POC (see MonetizationPlan.md)
 
-## Shop Items (ties to MonetizationPlan.md — full IAP product IDs go there)
+| Asset name | Type | Grants | Status |
+|---|---|---|---|
+| `FollowerPackSmall` | IAP | 1,000 Followers | ✅ (productId deferred to Phase 4) |
+| `CashPackSmall` | IAP | 500 Cash | ✅ (productId deferred to Phase 4) |
+| `SpaDayBurnoutReliefAd` | Ad | -40 Burnout (via BurnoutController) | ✅ |
+| `SpaDayBurnoutReliefPaid` | IAP | -40 Burnout (via BurnoutController) | ✅ (productId deferred to Phase 4) |
+| `RemoveAdsPermanent` | IAP | No economy grant — ownership itself is the flag (`GetItemAmount > 0`), maxPurchases = 1 | ✅ |
+| `RewardedBoostAd` | Ad | `AlgorithmPushBoost` | ✅ |
+| Manager Capsules (Free/tiered-paid) | Ad/Free/IAP | Weighted-random Manager pull by rarity | 🔲 pending POC + rarity system |
 
-| Asset name | Payment type | Grants |
-|---|---|---|
-| `FollowerPackSmall` | Real money | 1,000 `Followers` |
-| `CashPackSmall` | Real money | 500 `Cash` |
-| `SpaDayBurnoutReliefAd` | Ad only | -40 Burnout | Grant logic deferred to Burnout custom script (Phase 2) |
-| `SpaDayBurnoutReliefPaid` | Real money | -40 Burnout | Grant logic deferred to Burnout custom script (Phase 2); productId deferred to Phase 4 |
-| `RemoveAdsPermanent` | Real money | Disables ad placements (project-side flag, not an economy grant) |
-| `RewardedBoostAd` | `buyWithAd` | Grants `AlgorithmPushBoost` free |
+## Achievements — ✅ 3 built
 
----
+| Asset name | Condition |
+|---|---|
+| `FirstPost` | Lifetime own 1x `SelfieSession` (`businessLock`, `TotalAmount`) |
+| `HundredFollowers` | 100 lifetime `Followers` earned (`currencyLock`, `TotalAmount`) |
+| `FirstRebrand` | 1 Rebrand completed (`prestigeLock`) |
 
-## Prestige — "Rebrand"
+Player Cosmetics (avatar unlocks via achievements/progress) — deferred to V1.1, confirmed NOT natively supported (needs new definition-asset type + new Output target).
 
-- **Requirement:** `Cash` ≥ 10,000 AND player level ≥ 5 (tune later).
-- **Reward:** `Aura` — 1 per Rebrand initially, scaling formula TBD during balancing.
-- **Reset scope:** `Followers`, `Cash`, `Burnout`, Business holders, Manager holders, Boost inventory all reset. `Aura` and any `Aura`-purchased persistent Upgrades are excluded (`exludedCurrencies` field — note the package's intentional misspelling).
-- **Persistent Aura upgrades:** define in a later pass, once first Rebrand loop is playtested — e.g., permanent production multiplier per Aura spent.
+## Prestige — "Rebrand" — ✅ configured
 
----
+- Requirement: `Cash` ≥ 10,000 AND player level ≥ 5.
+- Reward: `Aura` — scaling formula TBD (Phase 6).
+- Reset scope: `Followers`, `Cash`, `Business` holders, `Manager` holders, `Boost` inventory = reset. `Aura`, `CloutCoin` = excluded (`exludedCurrencies`, intentional package misspelling, do not correct). `Burnout` reset handled by `BurnoutController.cs` listening to `OnPrestige` (engine has no native CustomStat reset hook).
+- Persistent Aura upgrades: not yet defined, deferred to a later pass per original schema.
+
+## Level-Up Rewards — 🔲 not yet configured (confirmed native, zero custom code required)
+
+`PlayerStats.levelupData` (`LevelDataHolder`) supports both exact-level (`levelRewards`) and repeating/divisor-based (`eachLevelReward`, optional `scaleEachLevelReward`) rewards, using the same `Reward` → `DropTable` → `Output` system as everything else. **To be configured**: grant `CloutCoin` on level-up (primary intended source of free premium currency, per monetization design) — exact cadence/amounts TBD during Phase 3 build.
 
 ## First-hour pacing target
 
 | Milestone | Target time |
 |---|---|
-| First `SelfieSession` purchase | Immediate (tutorial) |
-| First `StoryPost` unlock | ~2 minutes |
-| First Manager (`GhostwriterManager`) purchase | ~5 minutes |
-| `ClipzPlatform` unlock | ~15 minutes |
-| First `Boost` use | ~20 minutes |
-| First Shop interaction (ad-based, low friction) | ~25 minutes |
-| `ChroniclePlatform` unlock | ~45–60 minutes |
+| First `SelfieSession` purchase | Immediate |
+| First `StoryPost` unlock | ~2 min |
+| First Manager owned | ~5 min |
+| `ClipzPlatform` unlock | ~15 min |
+| First Boost use | ~20 min |
+| First Shop interaction | ~25 min |
+| `ChroniclePlatform` unlock | ~45–60 min |

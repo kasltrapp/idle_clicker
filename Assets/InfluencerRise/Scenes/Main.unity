@@ -3261,6 +3261,9 @@ GameObject:
   - component: {fileID: 1942664794}
   - component: {fileID: 1942664796}
   - component: {fileID: 1942664795}
+  - component: {fileID: 1942664797}
+  - component: {fileID: 1942664798}
+  - component: {fileID: 1942664799}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -3635,6 +3638,101 @@ MonoBehaviour:
   startingAmount:
     Mantissa: 1
     Exponent: 1
+--- !u!114 &1942664797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942664786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4bda639a31a2f84b9cc053acfff7390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.ShopManager
+  _loggingComment: 
+  _logLevel: 2
+  holders: []
+  OnShopItemAmountChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShopItemAmountAddedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _shopManagerComment: 
+  OnShopItemRewardsGranted:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttemptRealMoneyPurchase:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttemptAdPurchase:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1942664798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942664786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db81d8fb184f6c04e87aae18aec5de50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.BoostsManager
+  _loggingComment: 
+  _logLevel: 2
+  holders: []
+  _boostRuntimeComment: 
+  activeBoosts: []
+  OnBoostAmountChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBoostAmountAddedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBoostBought:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBoostUsed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnActiveBoostsChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTimeSkip:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1942664799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942664786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d8d06e56f10d648a082ad19719be9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.UpgradesManager
+  _loggingComment: 
+  _logLevel: 2
+  holders: []
+  _upgradesManagerComment: 
+  queueMode: 0
+  OnUpgradeBought:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUpgradeAmountChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUpgradeApplied:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUpgradeAmountAddedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1957577422
 PrefabInstance:
   m_ObjectHideFlags: 0
