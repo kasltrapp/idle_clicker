@@ -24,6 +24,13 @@ Check this before writing ANY new script. Verify first.
 | Weighted `DropTable` granting a Manager (`Output.managerOutput`) | `Output.cs`'s four grant fields (business/currency/boost/manager) are treated identically everywhere, including `DropTable.GetWeightedOutputs()` and `GenerateDrops()` — fully type-agnostic by direct code read. **But no demo in the package combines `DropStrategy.WeightedRandom` with a populated `managerOutput`.** Build a narrow proof-of-concept and verify statistically (both outcomes reachable) before building the full system on top of it. |
 | `ShopItem` + Weighted `DropTable` ("Capsule" pattern) | `ShopItem.rewardTables` has no restriction on `DropTable.strategy`. Confirmed structurally via `ShopManager.CompleteExternalPurchase()` → `RewardCalculator`/`DropTable.GenerateDrops`, same type-agnostic path. **No demo exercises this exact combination either** — same "prove it before building on it" caveat applies. |
 
+## Confirmed native, one important caveat
+
+| Feature | Finding |
+|---|---|
+| Manager duplicate-leveling | Fully native (`AddCount()` auto-fires on purchase/grant). **Caveat confirmed via audit**: the copies-per-level curve is a fixed global formula (geometric, ×2 per level) — NOT independently configurable per Manager asset without subclassing and overriding `UpgradeLevelCopiesCountMultiplier` in code. Rarity differentiation must come from pull odds + per-level power (`businessSpeedMultiplier`), not a custom leveling curve. |
+| Manager max level / duplicate overflow | No native cap (`MaxLevel = BigNumber.MaxValue` by default). No salvage/absorb mechanism exists because the precondition doesn't occur under default config. Building a cap is possible but explicitly out of scope for launch. |
+
 ## Requires real integration work (unavoidable, Phase 4)
 
 | Feature | What's needed |

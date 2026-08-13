@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091e30d98408c91448b7dccdf4039ac2, type: 3}
-  m_Name: EditorManagerRarity
+  m_Name: HattieTakersonRarity
   m_EditorClassIdentifier: Assembly-CSharp::InfluencerRise.Managers.ManagerRarity
-  manager: {fileID: 11400000, guid: 467ed8630c6e99c459905b965aaf013b, type: 2}
+  manager: {fileID: 11400000, guid: a85588003c2511d40a375400cbf5e124, type: 2}
   rarity: 0

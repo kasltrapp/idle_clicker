@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
-  m_Name: LongformEssay
+  m_Name: FirstPost
   m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Business
   _businessComment: 
   buySound:
@@ -34,23 +34,26 @@ MonoBehaviour:
     volume: 1
     category: 0
   metadata:
-    name: Long-form Essay
+    name: First Post
     icon: {fileID: 0}
-    iconString: 
+    iconString: FIRST POST
     model: {fileID: 0}
-    description: 
-  location: {fileID: 11400000, guid: 41d6bd6502c27b44a815c989b8f53ae1, type: 2}
-  businessName: Long-form Essay
+    description: The one that started it all. A single perfectly-lit selfie, captioned
+      like a manifesto. Historians will study this moment. Probably.
+  location: {fileID: 11400000, guid: a900b57e2de0dc645b7912dfb755a186, type: 2}
+  businessName: First Post
   image: {fileID: 0}
-  iconString: 
+  iconString: FIRST POST
   model: {fileID: 0}
-  description: 
+  description: The one that started it all. A single perfectly-lit selfie, captioned
+    like a manifesto. Historians will study this moment. Probably.
   metadataLegacySyncState:
-    name: Long-form Essay
+    name: First Post
     icon: {fileID: 0}
-    iconString: 
+    iconString: FIRST POST
     model: {fileID: 0}
-    description: 
+    description: The one that started it all. A single perfectly-lit selfie, captioned
+      like a manifesto. Historians will study this moment. Probably.
   businessGroup: 
   businessGroups: []
   maxAmount_:
@@ -63,17 +66,17 @@ MonoBehaviour:
   _costInfo: 
   cost:
   - businessInput: {fileID: 0}
-    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+    currencyInput: {fileID: 11400000, guid: f2192e57c8e62f4459feced8c52f4e80, type: 2}
     inputAmount:
-      Mantissa: 2
-      Exponent: 3
+      Mantissa: 1
+      Exponent: 0
   costMultiplier: 1.15
   useGeometricBoughtAmount: 0
   _productionComment: 
-  timeToProduce: 90
+  timeToProduce: 3
   dropEvaluationMode: 0
   autoProduce: 0
-  manager: {fileID: 11400000, guid: a85588003c2511d40a375400cbf5e124, type: 2}
+  manager: {fileID: 11400000, guid: 831191dccd529854dbb37683eaec9bdc, type: 2}
   productionRoundMode: 0
   increaseProductionAmountAfterRoundEnd: 0
   syncedIncreaseProductionAmountAfterRoundEnd: 0
@@ -87,12 +90,12 @@ MonoBehaviour:
     totalDropAmount: 1
     outputs:
     - businessOutput: {fileID: 0}
-      currencyOutput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+      currencyOutput: {fileID: 11400000, guid: f2192e57c8e62f4459feced8c52f4e80, type: 2}
       boostOutput: {fileID: 0}
       managerOutput: {fileID: 0}
       outputAmount:
-        Mantissa: 2.5
-        Exponent: 1
+        Mantissa: 1
+        Exponent: 0
       outputMaxAmount:
         Mantissa: -1
         Exponent: 0
@@ -123,12 +126,7 @@ MonoBehaviour:
   autoLevelUp: 1
   _upgradeLevelsComment: 
   upgradeLevels: []
-  autoUpgradeForFree: 0
+  autoUpgradeForFree: 1
   autoUpgradeToFirstLevelFree: 1
-  upgradeCost:
-  - businessInput: {fileID: 0}
-    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
-    inputAmount:
-      Mantissa: 1.5
-      Exponent: 2
+  upgradeCost: []
   upgradeCostMultiplier: 2

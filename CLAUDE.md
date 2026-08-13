@@ -30,6 +30,7 @@ A mobile idle-clicker built on the **Easy Idle Game** Unity asset (satirical "in
 10. **When verification is requested on a factual/historical claim, prefer raw evidence (exact tool output, exact file diff) over a narrated summary.** If raw evidence isn't available, say so explicitly rather than asserting confidence.
 11. **Label judgment calls as your own inference, explicitly, never as a restated prior instruction.** If you made a design decision the user or schema didn't specify, say "my own inference" — don't imply it was previously agreed.
 12. **Test the way a real player would before declaring something done** — fresh state, UI taps only, no API shortcuts — for anything that will ship. API-level verification proves backend logic works; it does not prove the player-facing path works.
+13. **All UI work must use proper layout containers — Layout Groups, anchors, Content Size Fitters — never manual (x,y) positioning.** Every screen needs: consistent grid/row alignment, consistent padding/margin values reused throughout (not ad-hoc per panel), readable font sizes appropriate for mobile, and clear visual indicators for currencies/stats (icon + label + value, not bare numbers). Before reporting any UI task done, self-review against docs/GameDesignDocument.md's UI/UX Direction section. This was learned the hard way earlier in the project — see git history around the first StarterFeed UI build for what "not done" looked like.
 
 ## Known tooling limitations (this environment)
 

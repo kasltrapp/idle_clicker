@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091e30d98408c91448b7dccdf4039ac2, type: 3}
-  m_Name: SocialMediaManagerRarity
+  m_Name: ChuckVerifiingtonRarity
   m_EditorClassIdentifier: Assembly-CSharp::InfluencerRise.Managers.ManagerRarity
-  manager: {fileID: 11400000, guid: 205cbfefd0e97154b95725abc633a7e8, type: 2}
+  manager: {fileID: 11400000, guid: 51c37cbe015831548921b1eb82416af3, type: 2}
   rarity: 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e7f65e7ff45e44daf63fe20620c691, type: 3}
-  m_Name: PublicistManager
+  m_Name: ToriSteller
   m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Manager
   _managerComment: 
   buySound:
@@ -22,18 +22,18 @@ MonoBehaviour:
     volume: 1
     category: 0
   metadata:
-    name: Publicist
+    name: Tori Steller
     icon: {fileID: 0}
     iconString: 
     model: {fileID: 0}
     description: 
-  managerName: Publicist
+  managerName: Tori Steller
   description: 
   image: {fileID: 0}
   iconString: 
   managerGroups: []
   metadataLegacySyncState:
-    name: Publicist
+    name: Tori Steller
     icon: {fileID: 0}
     iconString: 
     model: {fileID: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
       minBusinessLevel: 0
       maxBusinessLevel: -1
       runtimeFilter: 0
-  autoProduceOnLevel: 0
+  autoProduceOnLevel: 1
   autoCollectOnLevel: 0
   businessSpeedMultiplier: 2
   _activeBoostComment: 
