@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fba169f70d05b34e8b6ec7b0c8102ff, type: 3}
-  m_Name: SponsorDeals
+  m_Name: Streaming
   m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Business
   _businessComment: 
   buySound:
@@ -34,19 +34,19 @@ MonoBehaviour:
     volume: 1
     category: 0
   metadata:
-    name: Sponsor Deals
+    name: Streaming
     icon: {fileID: 0}
     iconString: 
     model: {fileID: 0}
     description: 
   location: {fileID: 11400000, guid: 41d6bd6502c27b44a815c989b8f53ae1, type: 2}
-  businessName: Sponsor Deals
+  businessName: Streaming
   image: {fileID: 0}
   iconString: 
   model: {fileID: 0}
   description: 
   metadataLegacySyncState:
-    name: Sponsor Deals
+    name: Streaming
     icon: {fileID: 0}
     iconString: 
     model: {fileID: 0}
@@ -65,15 +65,15 @@ MonoBehaviour:
   - businessInput: {fileID: 0}
     currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
     inputAmount:
-      Mantissa: 8
+      Mantissa: 6
       Exponent: 3
   costMultiplier: 1.15
   useGeometricBoughtAmount: 0
   _productionComment: 
-  timeToProduce: 180
+  timeToProduce: 150
   dropEvaluationMode: 0
   autoProduce: 0
-  manager: {fileID: 11400000, guid: b2ca9924357e4e04cb8f825a887e87d6, type: 2}
+  manager: {fileID: 11400000, guid: 3f2259a3ac612184782d9fbbe9005a4f, type: 2}
   productionRoundMode: 0
   increaseProductionAmountAfterRoundEnd: 0
   syncedIncreaseProductionAmountAfterRoundEnd: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
       boostOutput: {fileID: 0}
       managerOutput: {fileID: 0}
       outputAmount:
-        Mantissa: 6
+        Mantissa: 5
         Exponent: 1
       outputMaxAmount:
         Mantissa: -1
@@ -110,7 +110,7 @@ MonoBehaviour:
   unlockOnlyOnce: 1
   _locksInfo: 
   locks:
-  - businessLock: {fileID: 11400000, guid: 84efa02ea86c82744b7466053bcd8739, type: 2}
+  - businessLock: {fileID: 11400000, guid: 85677cc1d9630cd4488346ab6067c87f, type: 2}
     businessUpgradeLevelLock: {fileID: 0}
     currencyLock: {fileID: 0}
     playerLevelLock: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
     upgradeGroupLock: {fileID: 0}
     amountType: 0
     inputAmount:
-      Mantissa: 2
+      Mantissa: 1.5
       Exponent: 1
   - businessLock: {fileID: 0}
     businessUpgradeLevelLock: {fileID: 0}
@@ -136,8 +136,8 @@ MonoBehaviour:
     upgradeGroupLock: {fileID: 0}
     amountType: 0
     inputAmount:
-      Mantissa: 1.1
-      Exponent: 2
+      Mantissa: 8
+      Exponent: 1
   upperLocks: []
   xpsAddPerPurchaseToPlayer: 1
   levelupData:

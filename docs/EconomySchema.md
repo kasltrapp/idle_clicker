@@ -29,7 +29,7 @@ Single source of truth for every persisted asset name, category, and unlock orde
 |---|---|---|---|---|
 | `StarterFeed` | Your First Post | Free | Yes | ✅ |
 | `QuickTokPlatform` (was `ClipzPlatform`, renamed this pass) | QuickTok | 500 `Followers`, plus unlock **Lock**: level ≥ 12 AND own 1× `StoryFeed` | No | ✅ |
-| `ChroniclePlatform` | The Chronicle | 5,000 `Cash` | No | ✅ |
+| `BroadcastPlatform` (was `ChroniclePlatform`, renamed this pass) | Broadcast | 5,000 `Cash`, plus unlock **Lock**: level ≥ 34 AND own 1× `ReactionContent` | No | ✅ |
 
 Brand/merch platform: post-launch, not yet designed.
 
@@ -67,12 +67,25 @@ Brand/merch platform: post-launch, not yet designed.
 | `AlgorithmBaiting` (new tier 4) | 700 `Cash` | 15 `Cash` | 40s | `AlGorithm` (new) | own 20× `ReactionContent` AND level ≥ 42 | costMultiplier 1.15. **Phase 6 placeholder numbers** — cost geometrically interpolated between ReactionContent (300) and ViralChallenge (1,500) |
 | `ViralChallenge` (was `ViralAttempt`, QuickTok capstone) | 1,500 `Cash` | 40 `Followers` + 10 `Cash` (guaranteed, `DropStrategy.All`) | 60s | `ValIral` (new — confirmed had no manager before this pass, checked the actual asset rather than trusting the earlier build notes) | own 25× `AlgorithmBaiting` AND level ≥ 65 | costMultiplier 1.15, bonus drop-table output deferred to Phase 6 balancing (unchanged) |
 
-### ChroniclePlatform — ✅ all built
+### BroadcastPlatform (was `ChroniclePlatform`, renamed this pass) — ✅ all 5 tiers built (Batch C complete, final platform)
 
-| Asset name | Base cost | Produces | Time | Notes |
-|---|---|---|---|---|
-| `HotTake` (was `LongformEssay`) | 2,000 `Cash` | 25 `Cash` | 90s | costMultiplier 1.15, manager `HattieTakerson`, upgradeCost 150 `Cash`/level, `autoUpgradeForFree` = false |
-| `SponsorDeals` (was `SubscriberFunnel`) | 8,000 `Cash` | 60 `Cash` | 180s | costMultiplier 1.15, no manager, unlock: `HotTake` at upgrade level 3 |
+**⚠️ NAMING FLAG — RESOLVED:** a Batch C task referred to this platform as "Broadcast" throughout, but at that time no asset anywhere was named that — the Location asset was still `ChroniclePlatform` (display name "The Chronicle (long-form)"), unrenamed, since no rename was requested or approved during that pass. A later task explicitly approved the rename as the second and final exception under the same one-time rule used for Clipz→QuickTok (no player has ever loaded a save). That rename has now been performed: `ChroniclePlatform.asset` → `BroadcastPlatform.asset` (GUID unchanged: `41d6bd6502c27b44a815c989b8f53ae1`; `metadata.name` updated from `"The Chronicle (long-form)"` to `"Broadcast"`). All 5 Broadcast Business assets' `location` field, and the platform's own unlock Lock (`businessLock` → `ReactionContent`), re-verified via fresh disk reads pointing at the same GUID post-rename — no drift. Section header updated to match.
+
+**Level Progression data — confirmed against the locked table before wiring**, not guessed: Level 34 = "Broadcast platform unlocks (Hot Take), Own 1x Reaction Content"; Level 55 = "Broadcast: Unboxing Haul, Own 10x Hot Take"; Level 80 = "Broadcast: Streaming, Own 15x Unboxing Haul"; Level 110 = "Broadcast: Sponsor Deals, Own 20x Streaming"; Level 150 = "Broadcast: Own Brand (capstone), Own 25x Sponsor Deals" — all read directly from the Level Progression table below before any Lock was wired.
+
+**Locks wired this pass:** same compound businessLock+playerLevelLock AND pattern as Yourgram/QuickTok. `HotTake` (platform entry point) verified to have `locks: []` — left unchanged. `SponsorDeals` **did** have an existing lock — a `businessUpgradeLevelLock` gating on `HotTake` reaching upgrade level 3 — confirmed via direct read before touching anything; per this task's explicit instruction it was replaced (not layered on top of) with the new compound own-20x-`Streaming`-AND-level≥110 lock. `BroadcastPlatform`'s own unlock **Lock** (level+ownership gate) is separate from and additional to its existing 5,000-`Cash` unlock **cost** — both fields left independently intact.
+
+**Manager pre-check honored:** `SponsorDeals.manager` was confirmed `{fileID: 0}` (empty) both by a direct read before starting and by a defensive re-check inside the creation script itself, before creating/wiring `DeeSponsorman` — matching the task's "confirm first, stop and report rather than overwriting" instruction. No existing manager was found, so no stop was needed.
+
+**Build note (caught and fixed mid-batch):** the first creation pass set `location`, `manager`, and `locks` on the three newly-created businesses *after* `AssetDatabase.CreateAsset()`, but only called `EditorUtility.SetDirty()` on the pre-existing assets it modified (`HotTake`, `SponsorDeals`, the platform Location) — not on the three new ones. Unity does not auto-mark a `ScriptableObject` dirty on direct field writes after creation, so `AssetDatabase.SaveAssets()` silently skipped those three fields on all three new businesses. Caught by a fresh post-save disk read (not trusting the creation script's own success log), fixed with an explicit repair pass (`EditorUtility.SetDirty()` on all three, re-saved), and re-verified via a second fresh disk read plus independent GUID cross-reference before reporting done.
+
+| Asset name | Base cost | Produces | Time | Manager | Lock | Notes |
+|---|---|---|---|---|---|---|
+| `HotTake` (was `LongformEssay`) | 2,000 `Cash` | 25 `Cash` | 90s | `HattieTakerson` (unchanged) | none (platform entry point, verified) | costMultiplier 1.15, upgradeCost 150 `Cash`/level (unchanged), `autoUpgradeForFree` = false |
+| `UnboxingHaul` (new tier 2) | 4,000 `Cash` | 40 `Cash` | 120s | `FoxyHaulwell` (new) | own 10× `HotTake` AND level ≥ 55 | costMultiplier 1.15. **Phase 6 placeholder numbers (my own inference)** — cost is the exact geometric mean of HotTake (2,000) and SponsorDeals (8,000); output/time interpolated and rounded to clean values |
+| `Streaming` (new tier 3) | 6,000 `Cash` | 50 `Cash` | 150s | `CasFlowton` (new) | own 15× `UnboxingHaul` AND level ≥ 80 | costMultiplier 1.15. **Phase 6 placeholder numbers (my own inference)** — interpolated between UnboxingHaul (4,000) and SponsorDeals (8,000) |
+| `SponsorDeals` (was `SubscriberFunnel`) | 8,000 `Cash` | 60 `Cash` | 180s | `DeeSponsorman` (new — confirmed had no manager before this pass) | own 20× `Streaming` AND level ≥ 110 (replaced old `businessUpgradeLevelLock`-on-HotTake lock) | costMultiplier 1.15 |
+| `OwnBrand` (new tier 5, capstone — also the highest-tier business in all of v1) | 24,000 `Cash` | 150 `Cash` | 300s | `BaronVonBrand` (new) | own 25× `SponsorDeals` AND level ≥ 150 | costMultiplier 1.15. **Phase 6 placeholder numbers (my own inference)** — 3x/2.5x SponsorDeals' cost/output as capstone scaling, deliberately the highest cost/output of any business in the game (exceeds `VerifiedStatus` and `ViralChallenge`) |
 
 ## Business Groups — ✅ built
 
@@ -97,8 +110,12 @@ Brand/merch platform: post-launch, not yet designed.
 | `AlGorithm` (new) | `AlgorithmBaiting` | 0 | 0 | Common |
 | `ValIral` (new — confirmed manager-less before this pass) | `ViralChallenge` | 0 | 0 | Common |
 | `HattieTakerson` (was `PublicistManager`) | `HotTake` | 0 | 0 | Common |
+| `FoxyHaulwell` (new) | `UnboxingHaul` | 0 | 0 | Common |
+| `CasFlowton` (new) | `Streaming` | 0 | 0 | Common |
+| `DeeSponsorman` (new — confirmed manager-less on `SponsorDeals` before this pass) | `SponsorDeals` | 0 | 0 | Common |
+| `BaronVonBrand` (new) | `OwnBrand` | 0 | 0 | Common |
 
-Every manager-to-business assignment above was re-verified by raw GUID cross-reference (not name matching) directly against each `Business.manager` field — all 11 confirmed correct, no mismatches found. All new managers follow the exact same cost/lock/upgrade pattern as the pre-existing Common managers (free acquisition — `cost: []` — per the Capsule-based acquisition model; default `passiveBoosts` = speed ×2, Manager.cs's own field default, left unchanged as a Phase 6 placeholder like the others).
+Every manager-to-business assignment above was re-verified by raw GUID cross-reference (not name matching) directly against each `Business.manager` field — all 15 confirmed correct, no mismatches found. All new managers follow the exact same cost/lock/upgrade pattern as the pre-existing Common managers (free acquisition — `cost: []` — per the Capsule-based acquisition model; default `passiveBoosts` = speed ×2, Manager.cs's own field default, left unchanged as a Phase 6 placeholder like the others).
 
 **Rarity — ✅ system built.** `Rarity` enum (`InfluencerRise.Managers`, `Assets/InfluencerRise/Scripts/Managers/Rarity.cs`): `Common`/`Rare`/`Epic`/`Mythic`. Assigned via a companion `ManagerRarity` ScriptableObject per Manager (`Assets/InfluencerRise/Scripts/Managers/ManagerRarity.cs`, one instance per Manager under `Resources/ManagerRarities/`, also renamed this pass: `RonnyRingoRarity`, `ToriStellerRarity`, `DanaTrentRarity`, `ReggieReactingtonRarity`, `HattieTakersonRarity`) rather than a field on `Manager` itself or a subclass — `Manager.cs` is vendor code and the 5 assets above already exist as plain `Manager`-typed, name-locked assets, so re-typing them via subclassing was ruled out as unnecessarily invasive. `Manager.managerGroups` was also ruled out as an attachment point since it's an active functional dependency of `PrestigeManager.excludedManagerGroups`. All 5 Managers above are currently assigned **Common** — a placeholder, not a design decision on which managers should be rarer; that's a future task once actual Rare/Epic/Mythic manager content is designed.
 
@@ -201,8 +218,13 @@ All levels grant a Level-Up Reward (CloutCoin) regardless of whether new content
 | 28 | Own 15x Collab Farming | `ReactionContent`: OwnershipLock(CollabFarming,15) + LevelLock(28) | ✅ |
 | 42 | Own 20x Reaction Content | `AlgorithmBaiting`: OwnershipLock(ReactionContent,20) + LevelLock(42) | ✅ |
 | 65 | Own 25x Algorithm Baiting | `ViralChallenge`: OwnershipLock(AlgorithmBaiting,25) + LevelLock(65) | ✅ |
+| 34 | Own 1x Reaction Content | `BroadcastPlatform`: LevelLock(34) + OwnershipLock(ReactionContent,1) | ✅ |
+| 55 | Own 10x Hot Take | `UnboxingHaul`: OwnershipLock(HotTake,10) + LevelLock(55) | ✅ |
+| 80 | Own 15x Unboxing Haul | `Streaming`: OwnershipLock(UnboxingHaul,15) + LevelLock(80) | ✅ |
+| 110 | Own 20x Streaming | `SponsorDeals`: OwnershipLock(Streaming,20) + LevelLock(110) | ✅ |
+| 150 | Own 25x Sponsor Deals | `OwnBrand`: OwnershipLock(SponsorDeals,25) + LevelLock(150) | ✅ |
 
-Levels 34/55/80/110/150 (Broadcast platform) are not yet built — Batch C, pending.
+All 15 unlock gates across all 3 platforms (levels 1–150) are now built and cross-checked against this table — no drift found anywhere. Batch C (`BroadcastPlatform`) was the final platform; v1's full Business/Manager/Lock content is complete.
 
 ## First-hour pacing target
 
@@ -214,4 +236,4 @@ Levels 34/55/80/110/150 (Broadcast platform) are not yet built — Batch C, pend
 | `QuickTokPlatform` unlock | ~15 min |
 | First Boost use | ~20 min |
 | First Shop interaction | ~25 min |
-| `ChroniclePlatform` unlock | ~45–60 min |
+| `BroadcastPlatform` unlock | ~45–60 min |
