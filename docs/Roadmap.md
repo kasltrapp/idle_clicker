@@ -1,53 +1,59 @@
 # Roadmap
 
+## Completion tracker (v1 launch scope)
+
+| Category | Status |
+|---|---|
+| Tooling & docs | 100% |
+| Economy design & backend (15 businesses, 24 managers, 3 platforms, Locks, Prestige/Aura) | ~95% |
+| Monetization backend (CloutCoin, 5 Capsules) | ~70% — FreeCapsule cooldown + level-up config pending |
+| Core UI — Yourgram only | ~40% |
+| UI — QuickTok/Broadcast rows | 0% |
+| UI — tab switching (currently static labels) | 0% |
+| UI — Manager/Capsule, Prestige, Achievements, Shop screens | 0% |
+| UI — meta shell (splash, settings, profile, tutorial) | 0% |
+| Monetization integration (Phase 4) | 0%, correctly deferred |
+| Account/Login (Phase 5) | 0%, correctly deferred |
+
+**Overall v1: ~35%.** Backend/economy design is nearly done; player-facing UI is the majority of remaining work.
+
 ## Phase 0 — Tooling (COMPLETE)
-Git, Claude Code + Unity MCP, documentation system.
-
 ## Phase 1 — Design (COMPLETE)
-Game Design Document, Economy Schema, all supporting docs finalized. Revised post-AdVenture-Communist-reference-review (Manager acquisition model, UI direction, monetization design).
-
 ## Phase 2 — Core loop build (COMPLETE)
-All 3 platforms, all Businesses/Managers/Upgrades/Boosts/Shop Items/Achievements/Prestige built and verified. `BurnoutController.cs` written (decay/reset/shop-relief). Minimal functional UI built and player-tested end to end (buy → produce → currency increases, confirmed via actual button taps, not API shortcuts).
+All economy backend systems built and verified: 3 platforms, 15 businesses, 24 managers, full Lock chains, Prestige/Aura, Burnout (4 of 4 planned responsibilities except rise-on-production design), CloutCoin, 5 Capsules, Shop items, Achievements. Minimal UI built and player-tested for Yourgram only.
 
 ## Phase 3 — V1 Launch scope (CURRENT)
 
-Build order:
-1. **Manager Rarity system** — new field/subclass (confirmed not native).
-2. **Weighted-manager-output proof-of-concept** — narrow test before full build (confirmed structurally sound, unproven by example).
-3. **CloutCoin currency** + Manager Capsule Shop Items (Free/paid tiers).
-4. **Level-up rewards configuration** — grant CloutCoin on level-up (confirmed native, zero custom code).
-5. **Manager acquisition UI** — capsule-pull based, not flat currency-purchase (revised design).
-6. **SaveAndLoad** — local persistence (currently every session resets to 0).
-7. **Burnout rise-on-production** — design pass (rate per business/platform) + implementation.
-8. Clipz + Chronicle: platform switching + business list UI (extend proven StarterFeed pattern).
-9. Upgrade purchase UI, Boost UI.
-10. Prestige (Rebrand) UI.
-11. Achievements UI.
-12. Shop UI shell (purchase buttons disabled until Phase 4 IAP).
-13. UI/UX pass matching AdVenture Communist-inspired layout: top-left player profile icon, top-right hamburger dropdown menu (Settings/Inbox/News/Connect/Support), compact business row density, sequential tutorial speech-bubbles, legal/consent gate, loading screen, "welcome back" offline-summary screen (maps to native `ProfitApplicationSummary`).
+Remaining, in recommended order:
+1. **FreeCapsule cooldown script** (small, closes a real gap).
+2. **Level-up → CloutCoin reward config** (native, unconfigured).
+3. **Burnout rise-on-production design + implementation** (rate per business, possibly tiered by platform).
+4. **QuickTok + Broadcast business row UI** (extend the proven Yourgram template).
+5. **Real tab-switching logic** (bind bottom tabs to Location assets, wire tap-to-switch).
+6. **Manager/Capsule pull UI** (the screen where players actually acquire all 24 managers).
+7. **Prestige (Rebrand) UI**, including Prestige-count display.
+8. **Achievements UI.**
+9. **Shop UI shell** (purchase buttons disabled until Phase 4 IAP).
+10. **Meta shell**: splash/legal gate, loading screen, settings, player profile, hamburger menu, sequential tutorial, welcome-back offline-summary screen.
+11. A full end-to-end playtest pass once the above lands.
 
 ## Phase 4 — Monetization integration
-Unity IAP integration, sandbox testing, ad SDK integration, rewarded ad flow, real product IDs.
+Unity IAP, ad SDK, real product IDs, sandbox testing.
 
 ## Phase 5 — Account/Login
-Google Sign-In (Android) + Sign in with Apple (iOS, required if Google offered — App Store Guideline 4.8). Cloud save sync, extending Phase 3's local SaveAndLoad.
+Google Sign-In + Sign in with Apple, cloud save sync.
 
-## V1.1 — Fast follow (post-launch, not blocking initial ship)
-- **Player Cosmetics** (avatar unlocks via Achievements/events/progress) — confirmed needs new definition-asset type + new Output target, not present in engine natively.
-- Additional Manager rarity tiers/pool depth, if v1's capsule system needs more content.
+## V1.1 — Fast follow
+Player Cosmetics system (confirmed needs new definition-asset type). Additional Rare/Legendary content if v1 pool needs depth. Manager max-level/salvage system, only if real player data suggests it's needed.
 
-## Post-Launch Content (evaluate based on real player data, not pre-built)
-- 4th platform (brand/merch).
-- Additional Achievements, Boosts, Upgrades.
-- Deeper business chains per platform (reference shows 4+ tiers; v1 ships with 2-3).
+## Post-Launch Content
+4th platform. Deeper business chains (6+ tiers per platform). Additional Achievements/Boosts/Upgrades.
 
-## Explicitly cut from scope — deliberate exclusions, not oversights
-- **Trades** (resource-conversion economy, tiered milestone unlocks) — judged too specific to the AdVenture Communist reference's own bespoke fiction; risks being a direct copy rather than a genre convention.
-- **Missions as a separate quest-tracker system** — deliberately replaced with native level-up rewards instead. Reference game's mission-chest pattern was identified as progress-gating tied to purchase (a dark pattern) and rejected on principle, not just scope.
-- **Progress-gated reward chests requiring purchase to unlock required progression currency** — explicitly rejected, see MonetizationPlan.md.
+## Explicitly cut from scope
+Trades system, Missions-as-separate-quest-tracker, progress-gated purchase-required reward chests — all deliberate exclusions, not oversights (see GameDesignDocument.md).
 
 ## Phase 6 — Balancing
-All placeholder numbers (costs, multipliers, production rates, Burnout rates, capsule odds) tuned against real playtest data. Full list of flagged placeholders lives in EconomySchema.md's per-item notes.
+All placeholder numbers (costs, multipliers, Capsule costs/weights, Burnout rates) tuned against real playtest data.
 
 ## Phase 7 — Release prep
-Full BuildReleaseChecklist.md pass, store listing assets, submission.
+Full BuildReleaseChecklist.md pass, store listing, submission.

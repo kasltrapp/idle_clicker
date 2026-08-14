@@ -1,37 +1,30 @@
 # Build & Release Checklist
 
-Work through this before any store submission build. Not a during-development task list.
+Work through before any store submission build — not a during-development task list.
 
 ## Demo removal
-
-- [ ] Delete `Assets/EasyIdleGame/Demos/` entirely (or move outside `Assets/`).
-- [ ] Reason: everything under any `Resources` folder ships automatically via `Resources.LoadAll`, regardless of scene references.
-- [ ] Confirm no InfluencerRise script/asset references anything inside Demos before deleting.
-- [ ] Rebuild and confirm no compile errors after removal.
+- [ ] Delete `Assets/EasyIdleGame/Demos/` entirely.
+- [ ] Confirm no InfluencerRise script/asset references anything inside Demos first.
+- [ ] Rebuild, confirm no compile errors.
 
 ## Build Settings
-
-- [ ] Scenes In Build contains only real project scenes — no demo scenes.
-- [ ] Correct platform, signing, bundle ID, version, icon, splash screen.
+- [ ] Scenes In Build = real project scenes only.
+- [ ] Correct platform, signing, bundle ID, version, icon, splash.
 
 ## IAP / Ads
-
-- [ ] Real IAP product IDs filled into MonetizationPlan.md, matched exactly in store consoles.
+- [ ] Real IAP product IDs filled in, matched exactly in store consoles (all 5 Capsule tiers + original packs).
 - [ ] Sandbox purchases verified on a real device.
-- [ ] Ad SDK configured with real (not test) ad unit IDs.
+- [ ] Real ad unit IDs (not test) for release.
+- [ ] **Re-verify the zero-Legendary-via-ad constraint one final time before shipping** — see MonetizationPlan.md.
 
 ## Account/Login
-
-- [ ] If Google Sign-In is implemented on Android, confirm Sign in with Apple (or equivalent) is also implemented on iOS — required by App Store Review Guideline 4.8, not optional.
+- [ ] If Google Sign-In on Android, confirm Sign in with Apple on iOS too.
 
 ## Compliance
-
-- [ ] Privacy policy URL live and linked in store listing.
-- [ ] Age rating questionnaire completed accurately.
-- [ ] App Tracking Transparency prompt tested on iOS if applicable.
+- [ ] Privacy policy live and linked. Age rating accurate. ATT tested on iOS if applicable.
 
 ## Final checks
-
-- [ ] Fresh install → play → force-quit → relaunch → confirm save/load and offline profit work correctly.
-- [ ] Test on lowest-spec target device, not just dev machine.
-- [ ] Git tag the release commit after confirming submission-ready.
+- [ ] Fresh install → play → force-quit → relaunch → confirm save/load and offline profit.
+- [ ] Test on lowest-spec target device.
+- [ ] Confirm FreeCapsule's cooldown gap has been closed before shipping (see EngineCapabilities.md / MonetizationPlan.md).
+- [ ] Git tag the release commit.

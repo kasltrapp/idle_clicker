@@ -9023,6 +9023,7 @@ GameObject:
   - component: {fileID: 1942664799}
   - component: {fileID: 1942664800}
   - component: {fileID: 1942664801}
+  - component: {fileID: 1942664802}
   m_Layer: 0
   m_Name: GameManagers
   m_TagString: Untagged
@@ -9525,6 +9526,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfluencerRise.AutosaveTrigger
   minSecondsBetweenSaves: 1
+--- !u!114 &1942664802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942664786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94728b9a67be2e947b0f5e385a8881e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfluencerRise.Shop.FreeCapsuleCooldown
+  freeCapsule: {fileID: 11400000, guid: bd005b5efe9a8cc44b59e1290ff365c8, type: 2}
 --- !u!1001 &1957577422
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,11 +2,11 @@
 
 ## Folder placement
 
-All persisted definition assets go under `Assets/InfluencerRise/Resources/<category>/`:
 - Currencies → `Resources/Currencies/`
 - Businesses → `Resources/Businesses/`
 - Business Groups → `Resources/BusinessGroups/`
 - Managers → `Resources/Managers/`
+- Manager Rarities → `Resources/ManagerRarities/`
 - Locations → `Resources/Locations/`
 - Upgrades → `Resources/Upgrades/`
 - Boosts → `Resources/Boosts/`
@@ -14,30 +14,31 @@ All persisted definition assets go under `Assets/InfluencerRise/Resources/<categ
 - Achievements → `Resources/Achievements/`
 - PlayerStats/CustomStats → `Resources/PlayerStats/`
 
-Scripts → `Assets/InfluencerRise/Scripts/`, subfoldered by system (e.g. `Scripts/Burnout/`, `Scripts/UI/`).
+Scripts → `Assets/InfluencerRise/Scripts/`, subfoldered by system (`Scripts/Burnout/`, `Scripts/UI/`, `Scripts/Managers/`).
 Scenes → `Assets/InfluencerRise/Scenes/`.
-Art → `Assets/InfluencerRise/Art/`, subfoldered by type.
+Art → `Assets/InfluencerRise/Art/`, subfoldered by type (`Art/UI/Skins/`, `Art/Icons/Businesses/`, `Art/Icons/Managers/`).
 UI Prefabs → `Assets/InfluencerRise/Prefabs/UI/`.
 
 ## Asset naming
 
-- PascalCase, no spaces, no special characters.
-- Asset name = exact name in `EconomySchema.md`. Never deviate.
-- Display names go in `Metadata`, not the asset name — the asset name is a save identifier.
+- PascalCase, no spaces. Asset name = exact name in `EconomySchema.md`. Display names go in `Metadata`.
 
 ## Script naming
 
-- C# class name matches file name exactly.
-- PascalCase, descriptive, suffix by role (e.g. `BurnoutController.cs`).
+- C# class name matches file name exactly. PascalCase, suffix by role.
+
+## Custom enums
+
+- `Rarity.cs`: `Common`, `Rare`, `Legendary` (3 tiers, locked design language — do not reintroduce "Epic" or "Mythic"). `Legendary` is pinned to int value 3 for save-compatibility reasons — do not renumber.
 
 ## Scene naming
 
-- `Main` — primary gameplay scene.
+`Main` — primary gameplay scene.
 
 ## Prefab naming
 
-- Prefix with the system it belongs to: `UI_BusinessRow`, `UI_ManagerRow`, `FX_ViralMomentBoost`.
+Prefix by system: `UI_BusinessRow`, `UI_ManagerRow` (not yet built), `Skin_PanelPlaceholder`, `Skin_IconFramePlaceholder`.
 
 ## Git commit messages
 
-- Short imperative present tense: "Add Followers and Cash currency assets."
+Short imperative present tense.
