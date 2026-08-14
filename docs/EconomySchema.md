@@ -13,7 +13,7 @@ Single source of truth for every persisted asset name, category, and unlock orde
 | `Followers` | Primary production currency | Uncapped | Yes | ✅ |
 | `Cash` | Secondary currency | Uncapped | Yes | ✅ |
 | `Aura` | Prestige currency, earned only on Rebrand | Uncapped | No — excluded | ✅ |
-| `CloutCoin` | Premium currency — earned via level-up rewards, purchasable via IAP, spent on Manager Capsules | Uncapped | No — excluded (same treatment as Aura) | 🔲 |
+| `CloutCoin` | Premium currency — earned via level-up rewards, purchasable via IAP, spent on Manager Capsules | Uncapped | No — excluded (added to `PrestigeManager.exludedCurrencies` alongside `Aura`, which was confirmed still present before the edit — both now excluded) | ✅ |
 
 ## Custom Stat
 
@@ -196,7 +196,7 @@ All 3 confirmed manager-less (no Business.manager points to any of them) and all
 | `ViralMomentBoost` | GenericMultiplierBoost | 3x production, 5 min duration, global |
 | `AlgorithmPushBoost` | GenericMultiplierBoost | 2x speed, 10 min duration, global |
 
-## Shop Items — ✅ 7 built; Capsule tiers 🔲 pending POC (see MonetizationPlan.md)
+## Shop Items — ✅ 12 built (7 core + 5 real Capsule tiers, POC replaced with production assets)
 
 | Asset name | Type | Grants | Status |
 |---|---|---|---|
@@ -206,7 +206,19 @@ All 3 confirmed manager-less (no Business.manager points to any of them) and all
 | `SpaDayBurnoutReliefPaid` | IAP | -40 Burnout (via BurnoutController) | ✅ (productId deferred to Phase 4) |
 | `RemoveAdsPermanent` | IAP | No economy grant — ownership itself is the flag (`GetItemAmount > 0`), maxPurchases = 1 | ✅ |
 | `RewardedBoostAd` | Ad | `AlgorithmPushBoost` | ✅ |
-| Manager Capsules (Free/tiered-paid) | Ad/Free/IAP | Weighted-random Manager pull by rarity | 🔲 pending POC + rarity system |
+| `FreeCapsule` | Free | 1 Manager, weighted (`DropStrategy.WeightedRandom`, `totalDropAmount=1`, all 24 Managers as `Output` entries): Common weight 10, Rare weight 2, **Legendary weight 0** | ✅ — **zero-Legendary-weight verified**, see below |
+| `WatchAdCapsule` | Ad | Same pool, weighted better toward Rare: Common weight 6, Rare weight 4, **Legendary weight 0** | ✅ — **zero-Legendary-weight verified**, see below |
+| `CloutCoinCapsuleLow` | In-game cost | 50 `CloutCoin`. Same pool, Legendary now reachable: Common weight 4, Rare weight 5, Legendary weight 1 | ✅ — cost is a **Phase 6 placeholder (my own inference)**, no amount was specified |
+| `CloutCoinCapsuleHigh` | In-game cost | 250 `CloutCoin`. Same pool, best free-currency odds: Common weight 1, Rare weight 5, Legendary weight 4 | ✅ — cost is a **Phase 6 placeholder (my own inference)**, no amount was specified; 5× `CloutCoinCapsuleLow`'s cost |
+| `IAPCapsule` | IAP | Same pool, best odds overall: Common weight 0, Rare weight 5, Legendary weight 5 | ✅ (productId deferred to Phase 4). **Weights are my own inference** — task asked for "same as or better than `CloutCoinCapsuleHigh`"; chose to remove Common entirely and even the Rare/Legendary split, reasoning that a real-money shortcut should feel categorically better, not just marginally |
+
+**Weighted-manager-output mechanism — statistically confirmed, not just structurally sound.** `docs/EngineCapabilities.md` had this listed as "unproven by any working example" (a stale/inaccurate state — a prior commit's message claimed it was "confirmed" but the actual doc diff in that commit shows the "unproven" caveat being *added*, not resolved, and it was still unresolved at the start of this task). Rather than build 5 production Shop Items on an unverified mechanism, ran the actual proof-of-concept myself before building anything: `DropTable.GenerateDrops()` is a pure synchronous method, callable directly in Edit Mode with no Play Mode needed. Built an in-memory 3-entry weighted `DropTable` (Common weight 10 / Rare weight 5 / Legendary weight 1) using real Manager assets and ran it 20,000 times: observed 62.6% / 31.1% / 6.3% against expected 62.5% / 31.25% / 6.25% — all three outcomes reachable, distribution matches weights within 2%. Separately ran a zero-weight exclusion test (10,000 trials, one output at weight 0): **0 hits**, confirming a `weight: 0` entry is genuinely never selected — the exact mechanism `FreeCapsule`/`WatchAdCapsule`'s Legendary-exclusion depends on. `docs/EngineCapabilities.md` updated to reflect this confirmed finding (see that file).
+
+**Zero-Legendary-weight verification on `FreeCapsule` and `WatchAdCapsule` — done via two independent methods, both after a fresh disk/asset-database load (not reusing any in-memory reference from the creation script):**
+1. A C# script built a Manager→Rarity lookup from a fresh load of all 24 `ManagerRarity` assets, freshly loaded both Shop Items via `AssetDatabase.LoadAssetAtPath`, and asserted every Output whose Manager resolves to `Rarity.Legendary` has `weight == 0`. Result: both capsules have 24 total outputs, 3 correctly-present-but-zero-weight Legendary entries each, zero violations.
+2. Independently, raw `grep` directly against the saved `.asset` YAML for all 3 Legendary managers' GUIDs in both files, reading the literal `weight:` line each time. All 6 (3 managers × 2 capsules) read `weight: 0`.
+
+**Cooldown/claim-interval — confirmed does not exist, flagged rather than faked.** `ShopItem.cs` was read in full: its only limiting field is `maxPurchases` (a lifetime total cap, 0 = infinite) — no `claimCooldownSeconds` or any recurring-interval field exists anywhere on the class. Per the task's explicit instruction not to invent a fake cost to simulate one, `FreeCapsule`'s reward pool was built correctly, but **the "long cooldown timer" behavior described in this doc's Manager Capsules design intent is NOT implemented** — as built, `FreeCapsule` is purchasable with no gating at all once exposed in UI. This needs a small custom script (same category as `BurnoutController.cs` — a `MonoBehaviour` tracking last-claim-timestamp per Shop Item) as a separate future task, not attempted this batch.
 
 ## Achievements — ✅ 3 built
 

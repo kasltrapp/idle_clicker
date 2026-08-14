@@ -9307,6 +9307,7 @@ MonoBehaviour:
   resetCurrencies: 1
   exludedCurrencies:
   - {fileID: 11400000, guid: 17bd5dce3c79da2478cca56343e6c6b4, type: 2}
+  - {fileID: 11400000, guid: 187895cc6e3dd84499f485db6a868f38, type: 2}
   excludedCurrencyGroups: []
   resetShopItemUnlockState: 1
   prestiges:

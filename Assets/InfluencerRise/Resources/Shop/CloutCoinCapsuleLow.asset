@@ -1,0 +1,345 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e21a3acf791ca48909182a4846bbfe, type: 3}
+  m_Name: CloutCoinCapsuleLow
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.ShopItem
+  _shopItemComment: 
+  metadata:
+    name: CloutCoin Capsule (Low Tier)
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  shopItemGroups: []
+  productId: 
+  buyWithAd: 0
+  _multipleCostsFlag:
+    Mantissa: 0
+    Exponent: 0
+  _zeroFlag:
+    Mantissa: 0
+    Exponent: 0
+  _multipleCostsInfo: 
+  inGameCost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: 187895cc6e3dd84499f485db6a868f38, type: 2}
+    inputAmount:
+      Mantissa: 5
+      Exponent: 1
+  _rewardTablesInfo: 
+  rewardTables:
+  - _dropTableComment: 
+    strategy: 1
+    totalDropAmount: 1
+    outputs:
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 2741dd030e906994b9493750e59fb731, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: f550578f14fdcd44383724081e877d09, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 51c37cbe015831548921b1eb82416af3, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 7b1203887147ef848bb21ee35e96af98, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: a85588003c2511d40a375400cbf5e124, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: e86a4d0a06283fc47b42b425cce8759c, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: af5c7a702b3b026489efb1cedce8a80d, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 12cf71ceea917a44b9071dbee074815f, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 831191dccd529854dbb37683eaec9bdc, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 3f2259a3ac612184782d9fbbe9005a4f, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 9dc67a2586d494440bc8b68bf6ee2f9e, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: b2ca9924357e4e04cb8f825a887e87d6, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 205cbfefd0e97154b95725abc633a7e8, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: ddafc6362fcee7340bf8f01d376cca05, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 467ed8630c6e99c459905b965aaf013b, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 4
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 01eb546aa3670b34388062b3c3fec5bc, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: cfc526810ade5164cac8fc55567f1aae, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: a83a92c59e2e3be418b6dfff375e7a07, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 1b9677438cae32f46baa03cb9334d3f7, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 3d2652951d4bf424c90fcb34c76ca406, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: d65f6e26c18df114fbe8182a87f81c40, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 5
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: a4f7fbdcc9c50c348a1dc2bdfa8b4e8c, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: 1ec3595e555faeb4ead4b744887f0e51, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+    - businessOutput: {fileID: 0}
+      currencyOutput: {fileID: 0}
+      boostOutput: {fileID: 0}
+      managerOutput: {fileID: 11400000, guid: c699b4d00f1de454eb0cd9701129ef12, type: 2}
+      outputAmount:
+        Mantissa: 1
+        Exponent: 0
+      outputMaxAmount:
+        Mantissa: -1
+        Exponent: 0
+      dropChance: 1
+      weight: 1
+  maxPurchases: 0
+  _locksInfo: 
+  locks: []
+  _upperLocksInfo: 
+  upperLocks: []
+  unlockOnlyOnce: 1
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
