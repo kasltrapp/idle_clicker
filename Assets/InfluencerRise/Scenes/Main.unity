@@ -9585,6 +9585,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfluencerRise.Managers.RareLegendaryManagerEffects
   growthHacker: {fileID: 11400000, guid: 1b9677438cae32f46baa03cb9334d3f7, type: 2}
+  budgetBestie: {fileID: 11400000, guid: a83a92c59e2e3be418b6dfff375e7a07, type: 2}
+  algorithmItself: {fileID: 11400000, guid: 1ec3595e555faeb4ead4b744887f0e51, type: 2}
+  algorithmPushBoost: {fileID: 11400000, guid: d45e3b25d19454a46bfce9802b077524, type: 2}
+  cash: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+  nepoBaby: {fileID: 11400000, guid: a4f7fbdcc9c50c348a1dc2bdfa8b4e8c, type: 2}
+  cloutCoin: {fileID: 11400000, guid: 187895cc6e3dd84499f485db6a868f38, type: 2}
 --- !u!114 &1942664804
 MonoBehaviour:
   m_ObjectHideFlags: 0

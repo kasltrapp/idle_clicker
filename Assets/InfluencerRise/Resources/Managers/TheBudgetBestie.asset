@@ -51,27 +51,7 @@ MonoBehaviour:
   upgradeCost: []
   upgradeCostMultiplier: 2
   _passiveBoostsInfo: 
-  passiveBoosts:
-  - upgradeType: 2
-    value: 0.85
-    operation: 0
-    filters:
-      sourceBusiness: {fileID: 0}
-      sourceBusinessGroups: []
-      source: 0
-      targetCurrency: {fileID: 0}
-      targetCurrencyGroups: []
-      targetBusiness: {fileID: 0}
-      targetBusinessGroups: []
-      targetUpgrade: {fileID: 0}
-      targetUpgradeGroups: []
-      targetBoost: {fileID: 0}
-      targetBoostGroups: []
-      targetManager: {fileID: 0}
-      targetMergeRecipe: {fileID: 0}
-      minBusinessLevel: 0
-      maxBusinessLevel: -1
-      runtimeFilter: 0
+  passiveBoosts: []
   autoProduceOnLevel: 0
   autoCollectOnLevel: 0
   businessSpeedMultiplier: 2
