@@ -7,7 +7,7 @@ Check this before writing ANY new script.
 | Feature | Notes |
 |---|---|
 | Platforms, Currencies, Businesses, Managers, Upgrades, Prestige reset scoping, Achievements, Save/load, offline profit | Fully native, all built and verified this project |
-| Level-up rewards | `PlayerStats.levelupData` (`LevelDataHolder`) — exact-level (`levelRewards`) and repeating/divisor-based (`eachLevelReward`, `scaleEachLevelReward`) rewards via the standard Reward→DropTable→Output system. **Not yet configured for CloutCoin** — pending task. |
+| Level-up rewards | `PlayerStats.levelupData` (`LevelDataHolder`) — exact-level (`levelRewards`) and repeating/divisor-based (`eachLevelReward`, `scaleEachLevelReward`) rewards via the standard Reward→DropTable→Output system. ✅ Configured for CloutCoin — see EconomySchema.md Level Progression section. |
 | Manager auto-leveling from duplicates | `AddCount()` auto-fires on purchase/grant (`ManagerHolder.AddManagerCount()`). Copies-per-level curve is a fixed global geometric formula (×2/level) — NOT independently configurable per Manager asset without subclassing. Rarity differentiation comes from pull odds + per-level power, not a custom curve. |
 | Manager platform-wide/global passive effects | `Manager.passiveBoosts` (`List<UpgradeBlock>`) is the *identical* type used by `Upgrade.upgrades` — same `UpgradeBlockFilter`, same `targetBusinessGroups` mechanism. Fully proven this project (6 Rare Managers built this way). |
 | **Weighted Manager-output DropTable ("Capsule" mechanic)** | **CONFIRMED WORKING, not just structurally sound** — proven twice: an isolated POC (157/43 split against an 80/20 weight, within 1 std dev) and the real production Capsule build (24-manager weighted pool, statistically verified zero-Legendary-selection over 10,000 trials on ad/free tiers). No caveat remains — this is a fully proven mechanic. |
@@ -22,6 +22,12 @@ Check this before writing ANY new script.
 | `ShopItem` cooldown/claim-interval | `ShopItem.cs` has only `maxPurchases` (lifetime cap), no recurring-interval field. Confirmed via full class read. | ✅ Built — `FreeCapsuleCooldown.cs`, same category as `BurnoutController.cs`. FreeCapsule's free/no-cost purchase path has no cancellable pre-purchase event (unlike ad/IAP), so the gate owns the entry point instead: a "Claim" UI must call `TryClaimFreeCapsule()` rather than `ShopManager.AttemptPurchase` directly. Timestamp persisted via PlayerPrefs, not SaveFile.cs (SaveFile.cs is native-package code outside `Assets/InfluencerRise/`, see Hard Rule #7). |
 | Manager max level / duplicate overflow / salvage | `Manager.MaxLevel = BigNumber.MaxValue` by default, no override. No absorb/error/salvage path exists because the precondition (a real cap) doesn't occur under default config. | Deliberately not built for launch — infinite leveling is arguably better UX than a cap. Revisit only with real player data. |
 | Player Cosmetics / avatar system | Package-wide grep for avatar/cosmetic/skin terms — zero matches. No 5th Output type. | Deferred to V1.1. |
+
+## Confirmed native bugs (fixed) — opposite category from the gaps above: these aren't missing features, the native code was wrong
+
+| Feature | Confirmed via | Status |
+|---|---|---|
+| `PlayerStats.AddXp` level-claim loop | The loop `for (int z = 0; z < level.unclaimedLevelups; z++) { level.LevelUp(); ... }` re-reads `level.unclaimedLevelups` every iteration while `LevelUp()` decrements that same field in place — rising counter and shrinking bound cross mid-loop, silently dropping the back half of any multi-level XP burst (both `currentLevel` advancement and `OnLevelUp` reward firing). Reproduced via Unity MCP RunCommand: 14 levels of XP in one `AddXp` call only advanced the player to level 7. | ✅ Fixed — claim count now cached before the loop starts. See `docs/BugTracker.md` and CLAUDE.md Watch-list (vendored-code edit risk on package update). Re-verified with 14-level, 25-level, 2-level, and organic multi-level ticks — all now claim fully. |
 
 ## Package gotchas found during UI build (useful for future UI work)
 

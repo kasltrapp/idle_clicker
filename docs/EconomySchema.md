@@ -82,7 +82,11 @@ Single source of truth for every persisted asset name, category, unlock order, a
 | 110 | Broadcast: Sponsor Deals | Business | Own 20x Streaming |
 | 150 | Broadcast: Own Brand (capstone, end of v1 content) | Business | Own 25x Sponsor Deals |
 
-All levels grant a Level-Up Reward (CloutCoin) — config pending (native, see EngineCapabilities.md).
+All levels grant a Level-Up Reward (CloutCoin) — ✅ configured, fully native (`PlayerStats.levelupData`, no code). Two layers, both fire together on the same level-up (verified, not mutually overriding):
+- **Repeating**: 5 CloutCoin at level 1, scaled linearly by level (`scaleEachLevelReward=true`) — level N grants 5×N. Placeholder, Phase 6 tunable.
+- **Exact-level milestone bonuses** at the 14 levels above, tiered by unlock significance (placeholder, Phase 6 tunable): tier-2 business unlock=50, tier-3=100, tier-4=150, platform-tier capstone business=300, platform unlock (12, 34)=750, final v1 capstone (150, Own Brand)=1000.
+
+Reward assets live under `Resources/PlayerStats/LevelRewards/` (`LevelUpCloutCoinRepeating` + 14 `LevelUpCloutCoinBonusLevel{N}` assets).
 
 ---
 

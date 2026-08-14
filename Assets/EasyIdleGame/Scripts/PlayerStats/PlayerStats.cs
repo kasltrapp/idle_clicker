@@ -69,7 +69,14 @@ namespace EasyIdleGame
             Log($"Added {xps} XP. New total XP: {level.currentXp}", LogCategory.Verbose);
 
             if (!autoLevelUp) return;
-            for (int z = 0; z < level.unclaimedLevelups; z++)
+
+            // BUGFIX (see CLAUDE.md Watch-list): level.LevelUp() decrements level.unclaimedLevelups
+            // in place. Re-reading that same field as the loop bound on every iteration meant the
+            // increasing counter and the shrinking bound crossed at the midpoint, silently dropping
+            // the second half of any multi-level claim (both currentLevel advancement and the
+            // OnLevelUp reward firing for those dropped levels). Caching the count up front fixes it.
+            int levelsToClaim = level.unclaimedLevelups;
+            for (int z = 0; z < levelsToClaim; z++)
             {
                 level.LevelUp();
                 OnLevelUp(level.currentLevel);

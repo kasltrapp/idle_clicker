@@ -9050,9 +9050,39 @@ MonoBehaviour:
   levelIncrementMultiplier: 2
   autoLevelUp: 1
   levelupData:
-    levelRewards: []
-    eachLevelReward: []
-    scaleEachLevelReward: 0
+    levelRewards:
+    - level: 3
+      levelReward: {fileID: 11400000, guid: 4f3fadf6486d75b4d8a03d88d03eb20a, type: 2}
+    - level: 7
+      levelReward: {fileID: 11400000, guid: 3d49c2b4a5024da49b08453e39d318df, type: 2}
+    - level: 12
+      levelReward: {fileID: 11400000, guid: e600dadc240b4fe4cae1b468f47f60fa, type: 2}
+    - level: 14
+      levelReward: {fileID: 11400000, guid: 9233bcbb95f5a1f44a13b45de68875d8, type: 2}
+    - level: 18
+      levelReward: {fileID: 11400000, guid: 8ce16b9e9b1fa344abdde50647e77056, type: 2}
+    - level: 24
+      levelReward: {fileID: 11400000, guid: 2f1f24ac96342e142847ec81347d6ebb, type: 2}
+    - level: 28
+      levelReward: {fileID: 11400000, guid: 8dba74f3430af0d44847d166b4fd694b, type: 2}
+    - level: 34
+      levelReward: {fileID: 11400000, guid: 70a045bba0d14134381d107787ae08ca, type: 2}
+    - level: 42
+      levelReward: {fileID: 11400000, guid: 676596852e5a0844a992e124cffa20dc, type: 2}
+    - level: 55
+      levelReward: {fileID: 11400000, guid: 6f055350bac1c144e88898f729281c89, type: 2}
+    - level: 65
+      levelReward: {fileID: 11400000, guid: 874975fdf3cfe26418a9188fcc7e41d4, type: 2}
+    - level: 80
+      levelReward: {fileID: 11400000, guid: e0633f1d3b444eb43aa6a2736fcc1d99, type: 2}
+    - level: 110
+      levelReward: {fileID: 11400000, guid: debcc7874a36ca34db779e5da7ce2cc3, type: 2}
+    - level: 150
+      levelReward: {fileID: 11400000, guid: caf99750b7bddb740a0a878143cbe67c, type: 2}
+    eachLevelReward:
+    - level: 1
+      levelReward: {fileID: 11400000, guid: 1e8348f45096d4f489c17926265f9f96, type: 2}
+    scaleEachLevelReward: 1
     descriptions: []
   totalMoneyMade: []
   totalBusinessesObtained: []
