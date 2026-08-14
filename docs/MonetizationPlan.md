@@ -20,9 +20,12 @@ Philosophy: no pay-to-win. Real money buys convenience and accelerated access to
 
 ## Manager Capsules — designed, pending proof-of-concept + rarity system
 
+**⚠️ HARD CONSTRAINT — enforce when building Capsule Shop Items (this section is not yet built, so this cannot be enforced in code today; it is a documented requirement for that future task):**
+> **Legendary-tier Manager pool entries must NEVER appear in any Watch-Ad Capsule's DropTable.** Only CloutCoin-purchased or direct-IAP Capsule tiers may include Legendary-weight entries (`TheMainCharacter`, `TheAlgorithmItself`, `TheNepoBaby`, and any future Legendary manager). Before shipping any Capsule Shop Item that grants a free/ad-sourced reward, audit every ad-sourced `DropTable`'s `Output` list and confirm zero Legendary-tier manager entries are present. This is a manual audit step, not an automated gate — there is no native "rarity" concept in the `DropTable`/`Output` system (confirmed via code audit, see `EconomySchema.md`'s Rare/Legendary Manager sections), so nothing will stop a Legendary entry from being accidentally added to an ad table except this check.
+
 Modeled after the "Free/Iron/Gold/Diamond Capsule" pattern: a tiered set of Shop Items, each rolling one Manager from a weighted pool, odds skewing toward rarer tiers as capsule tier increases.
 
-**Design intent (Common/Rare/Epic/Mythic terminology, exact names TBD):**
+**Design intent (Common/Rare/Legendary terminology, locked — see `EconomySchema.md`'s `Rarity` enum):**
 - **Free Capsule** — no cost, long cooldown timer (e.g. every few hours), guarantees at least a Common-tier pull. Ensures a genuine free path exists.
 - **CloutCoin-purchasable capsule tiers** — spend earned or IAP-bought CloutCoin for better odds/guaranteed minimum rarity.
 - **Direct IAP capsule tiers** — real-money shortcut, same reward pool, no CloutCoin spend required.

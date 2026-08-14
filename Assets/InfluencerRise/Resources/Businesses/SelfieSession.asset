@@ -55,7 +55,8 @@ MonoBehaviour:
     description: A more deliberate selfie. Multiple angles considered, only one survives.
       The others never see the light of day - RIP.
   businessGroup: 
-  businessGroups: []
+  businessGroups:
+  - {fileID: 11400000, guid: 9f2f3af2af7772146bcf8c1c4d59d470, type: 2}
   maxAmount_:
     Mantissa: -1
     Exponent: 0

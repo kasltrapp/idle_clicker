@@ -9357,6 +9357,7 @@ MonoBehaviour:
   burnoutStat: {fileID: 11400000, guid: 5b7a4897128724841bd0a6f92b149ab3, type: 2}
   spaDayBurnoutReliefAd: {fileID: 11400000, guid: a1d48de5c440b00469e6054f7e6e3490, type: 2}
   spaDayBurnoutReliefPaid: {fileID: 11400000, guid: 3b61978d8bf72e8469b09571fe2e1b01, type: 2}
+  wellnessGuru: {fileID: 11400000, guid: cfc526810ade5164cac8fc55567f1aae, type: 2}
 --- !u!114 &1942664795
 MonoBehaviour:
   m_ObjectHideFlags: 0

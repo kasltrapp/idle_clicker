@@ -52,7 +52,8 @@ MonoBehaviour:
     model: {fileID: 0}
     description: 
   businessGroup: 
-  businessGroups: []
+  businessGroups:
+  - {fileID: 11400000, guid: 895327cb8cd0ec04cb374b22e1f7d36e, type: 2}
   maxAmount_:
     Mantissa: -1
     Exponent: 0

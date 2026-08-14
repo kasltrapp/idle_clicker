@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e7f65e7ff45e44daf63fe20620c691, type: 3}
+  m_Name: TheNepoBaby
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Manager
+  _managerComment: 
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  metadata:
+    name: The Nepo Baby
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  managerName: The Nepo Baby
+  description: 
+  image: {fileID: 0}
+  iconString: 
+  managerGroups: []
+  metadataLegacySyncState:
+    name: The Nepo Baby
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  _costInfo: 
+  cost: []
+  costMultiplier: 1
+  maxBuyableAmount: -1
+  useGeometricBoughtAmount: 0
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 1
+  autoUpgradeForFree: 1
+  autoUpgradeToFirstLevelFree: 1
+  upgradeCost: []
+  upgradeCostMultiplier: 2
+  _passiveBoostsInfo: 
+  passiveBoosts:
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: 01eb546aa3670b34388062b3c3fec5bc, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: 3d2652951d4bf424c90fcb34c76ca406, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: d65f6e26c18df114fbe8182a87f81c40, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: a83a92c59e2e3be418b6dfff375e7a07, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: 1b9677438cae32f46baa03cb9334d3f7, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: cfc526810ade5164cac8fc55567f1aae, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: c699b4d00f1de454eb0cd9701129ef12, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  - upgradeType: 7
+    value: 1.3
+    operation: 0
+    filters:
+      sourceBusiness: {fileID: 0}
+      sourceBusinessGroups: []
+      source: 0
+      targetCurrency: {fileID: 0}
+      targetCurrencyGroups: []
+      targetBusiness: {fileID: 0}
+      targetBusinessGroups: []
+      targetUpgrade: {fileID: 0}
+      targetUpgradeGroups: []
+      targetBoost: {fileID: 0}
+      targetBoostGroups: []
+      targetManager: {fileID: 11400000, guid: 1ec3595e555faeb4ead4b744887f0e51, type: 2}
+      targetMergeRecipe: {fileID: 0}
+      minBusinessLevel: 0
+      maxBusinessLevel: -1
+      runtimeFilter: 0
+  autoProduceOnLevel: 0
+  autoCollectOnLevel: 0
+  businessSpeedMultiplier: 2
+  _activeBoostComment: 
+  activeDuration:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+  cooldownDuration:
+    days: 0
+    hours: 0
+    minutes: 5
+    seconds: 0
+  _activeUpgradeInfo: 
+  activeUpgrade: []

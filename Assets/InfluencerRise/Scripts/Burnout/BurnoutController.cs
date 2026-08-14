@@ -5,8 +5,8 @@ using EasyIdleGame;
 namespace InfluencerRise.Burnout
 {
     /// <summary>
-    /// Ties the Burnout CustomStat into the two gameplay systems the Easy Idle Game
-    /// package cannot drive on its own. Three independent responsibilities:
+    /// Ties the Burnout CustomStat into the gameplay systems the Easy Idle Game
+    /// package cannot drive on its own. Four independent responsibilities:
     ///
     /// 1. Passive decay: Burnout slowly falls back toward 0 over real time, so a player
     ///    who stops actively producing isn't stuck at a high Burnout value forever.
@@ -23,6 +23,16 @@ namespace InfluencerRise.Burnout
     ///    SpaDayBurnoutReliefPaid) reduces Burnout by 40. This has to live in code because
     ///    a Shop Item's normal reward table can only grant currencies, businesses, boosts,
     ///    or managers - it has no field for changing a CustomStat like Burnout.
+    ///
+    /// 4. Wellness Guru passive decay boost: while the player owns TheWellnessGuru manager,
+    ///    Burnout decays faster (shorter effective tick interval), scaling with the
+    ///    manager's level. This exists because - same gap as responsibilities 1-3 - a
+    ///    Manager's native passiveBoosts (List&lt;UpgradeBlock&gt;) has no CustomStat target;
+    ///    UpgradeType only covers production/speed/cost/XP/duration/dropChance/dropWeight/
+    ///    cooldown, confirmed via full read of UpgradeType.cs and UpgradeBlockFilter.cs.
+    ///    TheWellnessGuru.asset is therefore created with an empty passiveBoosts list, and
+    ///    its entire effect is expressed here instead. See GetEffectiveDecayIntervalSeconds
+    ///    for the (placeholder) scaling curve.
     ///
     /// Every Burnout change goes through PlayerStats.IncrementStat (the same manager
     /// method the rest of the game uses for CustomStat changes - see CLAUDE.md Hard Rule
@@ -55,6 +65,9 @@ namespace InfluencerRise.Burnout
         [Tooltip("The real-money Spa Day shop item. Purchasing it reduces Burnout by 40.")]
         [SerializeField] private ShopItem spaDayBurnoutReliefPaid;
 
+        [Tooltip("The Wellness Guru manager. While owned, Responsibility 4 shortens the passive Burnout decay interval, scaling with its level. Leave unassigned to disable this responsibility entirely.")]
+        [SerializeField] private Manager wellnessGuru;
+
         private float _secondsSinceLastDecayTick;
 
         private void OnEnable()
@@ -75,16 +88,42 @@ namespace InfluencerRise.Burnout
                 ShopManager.Instance.OnShopItemRewardsGranted.RemoveListener(HandleShopItemRewardsGranted);
         }
 
-        /// <summary>Responsibility 1: ticks passive Burnout decay over real time.</summary>
+        /// <summary>
+        /// Responsibility 1: ticks passive Burnout decay over real time. The tick interval
+        /// is normally the fixed DecayIntervalSeconds constant; Responsibility 4
+        /// (GetEffectiveDecayIntervalSeconds) shortens it while Wellness Guru is owned.
+        /// With no Wellness Guru owned, this behaves identically to before that manager
+        /// existed - the effective interval is exactly DecayIntervalSeconds.
+        /// </summary>
         private void Update()
         {
             if (burnoutStat == null || PlayerStats.Instance == null) return;
 
             _secondsSinceLastDecayTick += Time.deltaTime;
-            if (_secondsSinceLastDecayTick < DecayIntervalSeconds) return;
+            float effectiveInterval = GetEffectiveDecayIntervalSeconds();
+            if (_secondsSinceLastDecayTick < effectiveInterval) return;
 
-            _secondsSinceLastDecayTick -= DecayIntervalSeconds;
+            _secondsSinceLastDecayTick -= effectiveInterval;
             ApplyBurnoutDelta(-DecayAmountPerTick);
+        }
+
+        /// <summary>
+        /// Responsibility 4: while TheWellnessGuru is owned, returns a shorter decay
+        /// interval than the base DecayIntervalSeconds so Burnout falls away faster, scaling
+        /// with the manager's level. PLACEHOLDER CURVE, not balance-tested: interval is
+        /// divided by (1 + level), so level 1 halves the interval, level 2 divides it by 3,
+        /// level 3 by 4, and so on. Returns the unmodified DecayIntervalSeconds if
+        /// wellnessGuru is unassigned or not yet owned (level &lt;= 0), so this responsibility
+        /// is a no-op until the manager is actually acquired.
+        /// </summary>
+        private float GetEffectiveDecayIntervalSeconds()
+        {
+            if (wellnessGuru == null || ManagersManager.Instance == null) return DecayIntervalSeconds;
+
+            ManagerHolder holder = ManagersManager.Instance.GetHolder(wellnessGuru);
+            if (holder == null || holder.level <= 0) return DecayIntervalSeconds;
+
+            return DecayIntervalSeconds / (1f + holder.level);
         }
 
         /// <summary>Responsibility 2: resets Burnout to exactly 0 when the player Rebrands.</summary>
