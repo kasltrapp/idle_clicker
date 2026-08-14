@@ -12,7 +12,7 @@ Single source of truth for every persisted asset name, category, unlock order, a
 | `Cash` | Secondary currency | Uncapped | Yes |
 | `Aura` | Prestige currency | Uncapped | No — excluded |
 | `CloutCoin` | Premium currency, spent on Capsules | Uncapped | No — excluded |
-| `Burnout` (Custom Stat) | 0–100, decays passively, rises with production (rise-rate design pending), resets on Rebrand | 0–100 | Yes → 0 |
+| `Burnout` (Custom Stat) | 0–100, decays passively, ✅ rises with production (built — `BurnoutController.cs` Responsibility 5, tier-scaled: gain = business tier 1-5 × 0.5, placeholder, Phase 6 tunable), resets on Rebrand | 0–100 | Yes → 0 |
 
 ---
 
@@ -127,22 +127,24 @@ Reward assets live under `Resources/PlayerStats/LevelRewards/` (`LevelUpCloutCoi
 
 ### Rare (6) — platform-wide or global passive effects, no automation
 
+⚠️ **A Manager's `passiveBoosts` field is NOT reachable by any native code path unless custom code bridges it** — confirmed via a full-project manager audit, empirically verified in Play Mode. `Manager.passiveBoosts` uses the same `UpgradeBlockFilter`/`targetBusinessGroups` type as `Upgrade.upgrades`, but the only native code reading it only ever looks up a Business's own single dedicated `.manager` — never any manager using group or global targeting. See `docs/BugTracker.md`'s "Rare/Legendary Manager passiveBoosts structurally unreachable" entry for the full root cause. The "Mechanism" column below reflects the ACTUAL fix per manager, not just the data configuration.
+
 | Manager | Effect | Mechanism |
 |---|---|---|
-| The Algorithm Whisperer | +40%/lvl production, all Yourgram | `passiveBoosts`, targetBusinessGroups=YourgramAllBusinesses |
-| The Clout Chaser | +40%/lvl production, all QuickTok | targetBusinessGroups=QuickTokAllBusinesses |
-| The Prestige Press | +40%/lvl production, all Broadcast | targetBusinessGroups=BroadcastAllBusinesses |
-| The Wellness Guru | Reduces Burnout decay interval while owned, scaling per level | **Custom code** — `BurnoutController.cs` responsibility #4 (native passiveBoosts can't target CustomStats) |
-| The Budget Bestie | -15%/lvl global purchase cost (0.85 placeholder) | `passiveBoosts`, UpgradeType.purchaseCost, empty filters (global) |
-| The Growth Hacker | +25%/lvl global player XP (1.25 placeholder) | `passiveBoosts`, UpgradeType.playerXp, empty filters (global) |
+| The Algorithm Whisperer | +40%/lvl production, all Yourgram | `passiveBoosts`, targetBusinessGroups=YourgramAllBusinesses. ✅ Reaches gameplay via `RareLegendaryManagerProductionModifier.cs` (custom `ProductionModifierAsset`, generic across all production-type managers). |
+| The Clout Chaser | +40%/lvl production, all QuickTok | targetBusinessGroups=QuickTokAllBusinesses. ✅ Same fix as above. |
+| The Prestige Press | +40%/lvl production, all Broadcast | targetBusinessGroups=BroadcastAllBusinesses. ✅ Same fix as above. |
+| The Wellness Guru | Reduces Burnout decay interval while owned, scaling per level | **Custom code** — `BurnoutController.cs` responsibility #4 (native passiveBoosts can't target CustomStats; unrelated to and unaffected by the passiveBoosts-reachability gap above, since it never went through the generic pipeline to begin with). |
+| The Budget Bestie | -15%/lvl global purchase cost (0.85 placeholder) | `passiveBoosts`, UpgradeType.purchaseCost, empty filters (global). ❌ **Still inert** — no discrete event to intercept (cost is read live/repeatedly, not granted once). Open, see BugTracker.md. |
+| The Growth Hacker | +25%/lvl global player XP (1.25 placeholder) | `passiveBoosts`, UpgradeType.playerXp, empty filters (global). ✅ Reaches gameplay via `RareLegendaryManagerEffects.cs` (custom, listens to `PlayerStats.OnXpAdded`, tops up via a second `AddXp` call). |
 
 ### Legendary (3) — global, CloutCoin/IAP Capsules only, never ad
 
 | Manager | Effect | Mechanism |
 |---|---|---|
-| The Main Character | +60%/lvl global production (1.6 placeholder) | `passiveBoosts`, empty filters |
-| The Algorithm Itself | +60%/lvl global speed (1.6 placeholder) | `passiveBoosts`, empty filters |
-| The Nepo Baby | +30%/lvl boost to own Capsule pull odds toward the other 8 Rare/Legendary managers | 8 individually-targeted `passiveBoosts` entries (UpgradeType.dropWeight, one per target — no native group-targeting for Managers, confirmed gap). **Manual maintenance required**: any future Rare/Legendary manager needs a matching entry added here or it won't benefit. |
+| The Main Character | +60%/lvl global production (1.6 placeholder) | `passiveBoosts`, empty filters. ✅ Reaches gameplay via `RareLegendaryManagerProductionModifier.cs` (same fix as the platform-wide Rare managers above — empty filter = matches every business). |
+| The Algorithm Itself | +60%/lvl global speed (1.6 placeholder) | `passiveBoosts`, empty filters. ❌ **Still inert** — production timing has no equivalent modifier-registry hook the way output amount does; open, see BugTracker.md. |
+| The Nepo Baby | +30%/lvl boost to own Capsule pull odds toward the other 8 Rare/Legendary managers | 8 individually-targeted `passiveBoosts` entries (UpgradeType.dropWeight, one per target — no native group-targeting for Managers, confirmed gap). **Manual maintenance required**: any future Rare/Legendary manager needs a matching entry added here or it won't benefit. ❌ **Still inert regardless of the above** — dropWeight resolution for Capsule rolls has no pre-roll hook found; open, see BugTracker.md. |
 
 *Rarity enum note: internally `Rarity.cs` uses `Legendary` (int 3) after a rename from a leftover default `Mythic`; an unused `Epic` value was removed and `Legendary` was explicitly pinned to int 3 to avoid a silent renumber breaking already-serialized assets.*
 
