@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c038fa00041e6f14fbee7995a369c608, type: 3}
+  m_Name: TherapySessionUpgrade
+  m_EditorClassIdentifier: EasyIdleGame::EasyIdleGame.Upgrade
+  _upgradeComment: 
+  buySound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  unlockSound:
+    clip: {fileID: 0}
+    volume: 1
+    category: 0
+  metadata:
+    name: Therapy Session
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  icon: {fileID: 0}
+  upgradeName: Therapy Session
+  description: 
+  metadataLegacySyncState:
+    name: Therapy Session
+    icon: {fileID: 0}
+    iconString: 
+    model: {fileID: 0}
+    description: 
+  group: 
+  targetBusinessGroups: []
+  upgradeGroups: []
+  _upgradeEffectsComment: 
+  _upgradeEffectsInfo: 
+  upgrades: []
+  _overrideUpgradesComment: 
+  overrideUpgrades: []
+  _overrideUpgradeModifiersComment: 
+  overrideUpgradeModifiers: []
+  overrideUpgradeLevelMultiplier: 1.2
+  upgradeDurationInSeconds: 0
+  _costInfo: 
+  cost:
+  - businessInput: {fileID: 0}
+    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+    inputAmount:
+      Mantissa: 1
+      Exponent: 2
+  maxBuyableAmount: 20
+  priceMultiplier_: 2.25
+  _locksInfo: 
+  locks: []
+  unlockOnlyOnce: 0

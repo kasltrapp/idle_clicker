@@ -6,7 +6,7 @@ namespace InfluencerRise.Burnout
 {
     /// <summary>
     /// Ties the Burnout CustomStat into the gameplay systems the Easy Idle Game
-    /// package cannot drive on its own. Five independent responsibilities:
+    /// package cannot drive on its own. Six independent responsibilities:
     ///
     /// 1. Passive decay: Burnout slowly falls back toward 0 over real time, so a player
     ///    who stops actively producing isn't stuck at a high Burnout value forever.
@@ -54,6 +54,21 @@ namespace InfluencerRise.Burnout
     ///    often simply dominates the net trend, which is the intended "opposing forces"
     ///    design per EconomySchema.md.
     ///
+    /// 6. Therapy Session relief: buying TherapySessionUpgrade reduces Burnout by 15.
+    ///    Same category-of-gap as everything else here - Upgrade.upgrades entries can't
+    ///    target CustomStats (confirmed by the same UpgradeType.cs/UpgradeBlockFilter.cs
+    ///    read that justified Responsibility 4), so TherapySessionUpgrade.asset is created
+    ///    with an empty upgrades list and its entire effect lives here instead. Hooks
+    ///    EasyIdleGame.UpgradesManager.OnUpgradeBought (UnityEvent&lt;Upgrade&gt;), confirmed via
+    ///    a full read of UpgradesManager.cs: it's the same event IBuyableHolderManager.
+    ///    TryBuyItems invokes as OnItemBought for every successful upgrade purchase (the
+    ///    manager's own OnItemBought property literally redirects to it), carrying the
+    ///    exact Upgrade asset bought - enough identity to ignore every other Upgrade
+    ///    (BetterRingLight, FasterEditingSoftware, BulkContentBatching) and react only to
+    ///    TherapySessionUpgrade specifically. TherapySessionUpgrade.upgradeDurationInSeconds
+    ///    is 0 (instant), so this fires as part of the same purchase click, not a
+    ///    delayed/pending completion.
+    ///
     /// Every Burnout change goes through PlayerStats.IncrementStat (the same manager
     /// method the rest of the game uses for CustomStat changes - see CLAUDE.md Hard Rule
     /// #4) and is clamped to the 0-100 range stated in EconomySchema.md.
@@ -74,6 +89,9 @@ namespace InfluencerRise.Burnout
 
         /// <summary>Burnout gained per production round = business tier (1-5) x this. Placeholder, not yet balance-tested. Tier 1 = +0.5, tier 5 = +2.5 per event.</summary>
         private const float BurnoutRisePerTierMultiplier = 0.5f;
+
+        /// <summary>How much Burnout is reduced by buying TherapySessionUpgrade. Per EconomySchema.md's original schema note. Placeholder, not yet balance-tested.</summary>
+        private const float TherapySessionReliefAmount = 15f;
 
         // --- Fixed range, per EconomySchema.md's Custom Stat table (0-100) ---
         private const float BurnoutMin = 0f;
@@ -113,6 +131,9 @@ namespace InfluencerRise.Burnout
         [Tooltip("The Wellness Guru manager. While owned, Responsibility 4 shortens the passive Burnout decay interval, scaling with its level. Leave unassigned to disable this responsibility entirely.")]
         [SerializeField] private Manager wellnessGuru;
 
+        [Tooltip("The Therapy Session upgrade. Buying it reduces Burnout by 15. Leave unassigned to disable this responsibility entirely.")]
+        [SerializeField] private Upgrade therapySessionUpgrade;
+
         private float _secondsSinceLastDecayTick;
 
         private void OnEnable()
@@ -125,6 +146,9 @@ namespace InfluencerRise.Burnout
 
             if (BusinessesManager.Instance != null)
                 BusinessesManager.Instance.OnProductionRoundFinishedEvent.AddListener(HandleProductionRoundFinished);
+
+            if (UpgradesManager.Instance != null)
+                UpgradesManager.Instance.OnUpgradeBought.AddListener(HandleUpgradeBought);
         }
 
         private void OnDisable()
@@ -137,6 +161,9 @@ namespace InfluencerRise.Burnout
 
             if (BusinessesManager.Instance != null)
                 BusinessesManager.Instance.OnProductionRoundFinishedEvent.RemoveListener(HandleProductionRoundFinished);
+
+            if (UpgradesManager.Instance != null)
+                UpgradesManager.Instance.OnUpgradeBought.RemoveListener(HandleUpgradeBought);
         }
 
         /// <summary>
@@ -210,6 +237,15 @@ namespace InfluencerRise.Burnout
             if (!BusinessTierByName.TryGetValue(holder.business.name, out int tier)) return;
 
             ApplyBurnoutDelta(tier * BurnoutRisePerTierMultiplier);
+        }
+
+        /// <summary>Responsibility 6: reduces Burnout by 15 when TherapySessionUpgrade is bought.</summary>
+        private void HandleUpgradeBought(Upgrade upgrade)
+        {
+            if (burnoutStat == null || PlayerStats.Instance == null) return;
+            if (upgrade == null || upgrade != therapySessionUpgrade) return;
+
+            ApplyBurnoutDelta(-TherapySessionReliefAmount);
         }
 
         /// <summary>Applies a Burnout change through PlayerStats.IncrementStat, clamped to [0, 100].</summary>

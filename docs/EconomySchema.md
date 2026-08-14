@@ -157,7 +157,7 @@ Reward assets live under `Resources/PlayerStats/LevelRewards/` (`LevelUpCloutCoi
 | `BetterRingLight` | production | FirstPost/SelfieSession area (contextual filter) | +25% output |
 | `FasterEditingSoftware` | speed | ClipzContentGroup | -20% production time |
 | `BulkContentBatching` | purchaseCost | Global | -10% purchase cost |
-| `TherapySessionUpgrade` | — | Burnout | **Deferred** — Upgrades can't target CustomStats |
+| `TherapySessionUpgrade` | — | Burnout | ✅ Built — `passiveBoosts`-equivalent gap (Upgrades can't target CustomStats, same as everything else Burnout-related); effect lives in `BurnoutController.cs` Responsibility 6 instead, hooking `UpgradesManager.OnUpgradeBought`. -15 Burnout per purchase. Repeatable (`maxBuyableAmount=20`), cost 100 Cash base ×2.25/purchase (placeholder, Phase 6 tunable), instant (no purchase delay), no locks. |
 
 ## Aura-purchased Permanent Upgrades — ✅ 3 built (locked selection, no more planned)
 
