@@ -65,10 +65,10 @@ MonoBehaviour:
   _costInfo: 
   cost:
   - businessInput: {fileID: 0}
-    currencyInput: {fileID: 11400000, guid: d8bc89b6abb447c4b9dae7461cfc9808, type: 2}
+    currencyInput: {fileID: 11400000, guid: f2192e57c8e62f4459feced8c52f4e80, type: 2}
     inputAmount:
-      Mantissa: 3
-      Exponent: 2
+      Mantissa: 4
+      Exponent: 3
   costMultiplier: 1.15
   useGeometricBoughtAmount: 0
   _productionComment: 

@@ -26,37 +26,41 @@ Single source of truth for every persisted asset name, category, unlock order, a
 
 ---
 
-## Businesses — ✅ all 15 built, full Lock chains wired
+## Businesses — ✅ all 15 built, full Lock chains wired, ✅ full Cash-bootstrap trace complete (all 3 stranded businesses fixed)
+
+**Cost currency note:** every business's `Cost` column below is real asset data, confirmed via direct read this session — not the original design intent, which used Cash for every QuickTok/Broadcast business including their entry points. Three QuickTok businesses (`TrendChase`, `CollabFarming`, `ReactionContent`) had their cost **currency** changed from Cash to Followers because each was "stranded" — costing a currency with zero prior source anywhere earlier in the reachable chain, an unreachable circular dependency confirmed via `EconomySimulator.cs`. `costMultiplier` (1.15 throughout) was never touched. Full dependency trace and evidence in `docs/BugTracker.md`'s "QuickTok Cash-bootstrap chain" entry — every other business (all 5 Yourgram, QuickTok's `AlgorithmBaiting`/`ViralChallenge`, all 5 Broadcast) was confirmed, not assumed, to already have a valid currency source in the reachable chain and needed no change.
 
 ### Yourgram
 
-| Asset name | Display | Manager | Lock |
-|---|---|---|---|
-| `FirstPost` | First Post | Ronny Ringo | None (free start) |
-| `SelfieSession` | Selfie Session | Faye Filterton | Own 10x FirstPost AND Level ≥3 |
-| `StoryFeed` | Story Feed | Tori Steller | Own 15x SelfieSession AND Level ≥7 |
-| `EngagementFarming` | Engagement Farming | Farmer Bob | Own 20x StoryFeed AND Level ≥14 |
-| `VerifiedStatus` | Verified Status (capstone) | Chuck Verifiington | Own 25x EngagementFarming AND Level ≥24 |
+| Asset name | Display | Manager | Cost | Lock |
+|---|---|---|---|---|
+| `FirstPost` | First Post | Ronny Ringo | 1 Followers | None (free start) |
+| `SelfieSession` | Selfie Session | Faye Filterton | 3 Followers | Own 10x FirstPost AND Level ≥3 |
+| `StoryFeed` | Story Feed | Tori Steller | 15 Followers | Own 15x SelfieSession AND Level ≥7 |
+| `EngagementFarming` | Engagement Farming | Farmer Bob | 100 Followers | Own 20x StoryFeed AND Level ≥14 |
+| `VerifiedStatus` | Verified Status (capstone) | Chuck Verifiington | 500 Followers | Own 25x EngagementFarming AND Level ≥24 |
 
 ### QuickTok
 
-| Asset name | Display | Manager | Lock |
-|---|---|---|---|
-| `TrendChase` | Trend Chase | Dana Trent | None (platform entry point) |
-| `CollabFarming` | Collab Farming | Coco Labor | Own 10x TrendChase AND Level ≥18 |
-| `ReactionContent` | Reaction Content | Reggie Reactington | Own 15x CollabFarming AND Level ≥28 |
-| `AlgorithmBaiting` | Algorithm Baiting | Al Gorithm | Own 20x ReactionContent AND Level ≥42 |
-| `ViralChallenge` | Viral Challenge (capstone) | Val Iral | Own 25x AlgorithmBaiting AND Level ≥65 |
+| Asset name | Display | Manager | Cost | Lock |
+|---|---|---|---|---|
+| `TrendChase` | Trend Chase | Dana Trent | **300 Followers** (was 50 Cash — fixed, stranded) | None (platform entry point) |
+| `CollabFarming` | Collab Farming | Coco Labor | **800 Followers** (was 120 Cash — fixed, stranded) | Own 10x TrendChase AND Level ≥18 |
+| `ReactionContent` | Reaction Content | Reggie Reactington | **4000 Followers** (was 300 Cash — fixed, stranded) | Own 15x CollabFarming AND Level ≥28 |
+| `AlgorithmBaiting` | Algorithm Baiting | Al Gorithm | 700 Cash (confirmed OK — ReactionContent already producing Cash by this point) | Own 20x ReactionContent AND Level ≥42 |
+| `ViralChallenge` | Viral Challenge (capstone) | Val Iral | 1500 Cash (confirmed OK) | Own 25x AlgorithmBaiting AND Level ≥65 |
 
 ### Broadcast
 
-| Asset name | Display | Manager | Lock |
-|---|---|---|---|
-| `HotTake` | Hot Take | Hattie Takerson | None (platform entry point) |
-| `UnboxingHaul` | Unboxing Haul | Foxy Haulwell | Own 10x HotTake AND Level ≥55 |
-| `Streaming` | Streaming | Cas Flowton | Own 15x UnboxingHaul AND Level ≥80 |
-| `SponsorDeals` | Sponsor Deals | Dee Sponsorman | Own 20x Streaming AND Level ≥110 |
-| `OwnBrand` | Own Brand (capstone, end of v1 content) | Baron Von Brand | Own 25x SponsorDeals AND Level ≥150 |
+| Asset name | Display | Manager | Cost | Lock |
+|---|---|---|---|---|
+| `HotTake` | Hot Take | Hattie Takerson | 2000 Cash (confirmed OK — QuickTok's Cash chain already flowing before Broadcast unlocks) | None (platform entry point) |
+| `UnboxingHaul` | Unboxing Haul | Foxy Haulwell | 4000 Cash (confirmed OK) | Own 10x HotTake AND Level ≥55 |
+| `Streaming` | Streaming | Cas Flowton | 6000 Cash (confirmed OK) | Own 15x UnboxingHaul AND Level ≥80 |
+| `SponsorDeals` | Sponsor Deals | Dee Sponsorman | 8000 Cash (confirmed OK) | Own 20x Streaming AND Level ≥110 |
+| `OwnBrand` | Own Brand (capstone, end of v1 content) | Baron Von Brand | 24000 Cash (confirmed OK) | Own 25x SponsorDeals AND Level ≥150 |
+
+**Reachability status:** with all 3 fixes applied, `EconomySimulator.cs` confirms the entire 15-business chain cascades correctly end to end (all businesses through `Streaming` purchased in growing quantity within 60 simulated days; `SponsorDeals`/`OwnBrand` confirmed reachable given more time — Level 110 reached at simulated day 240). **Level 110/150 are not reached within a 60-day cap**, but this is no longer a currency-bootstrap problem — extended-cap testing confirms it's the already-tuned exponential XP curve (`levelIncrementMultiplier=1.13`) decelerating sharply past ~Level 90, a separate, known mechanism out of this fix's scope (see BugTracker.md).
 
 *Old asset names (pre-rename batch), for historical reference: `SelfieSession`→`FirstPost`, `StoryPost`→`StoryFeed`, `RingLightSetup`→`EngagementFarming`, `DuetFarm`→`ReactionContent`, `ViralAttempt`→`ViralChallenge`, `LongformEssay`→`HotTake`, `SubscriberFunnel`→`SponsorDeals`. `TrendChase` name unchanged.*
 
@@ -87,6 +91,10 @@ All levels grant a Level-Up Reward (CloutCoin) — ✅ configured, fully native 
 - **Exact-level milestone bonuses** at the 14 levels above, tiered by unlock significance (placeholder, Phase 6 tunable): tier-2 business unlock=50, tier-3=100, tier-4=150, platform-tier capstone business=300, platform unlock (12, 34)=750, final v1 capstone (150, Own Brand)=1000.
 
 Reward assets live under `Resources/PlayerStats/LevelRewards/` (`LevelUpCloutCoinRepeating` + 14 `LevelUpCloutCoinBonusLevel{N}` assets).
+
+**Player XP curve — ✅ fixed (was a structural Level-0 deadlock).** `PlayerStats.firstLevelXp`/`levelIncrementMultiplier` were untouched EasyIdleGame package defaults (1000/2) never actually configured for this schedule; combined with Player XP being purchase-only natively (+1/unit via `Business.xpsAddPerPurchaseToPlayer`), Level 1 alone required 1,000 purchases, permanently blocking all progression. Fixed via `EconomySimulator.cs`-driven iterative tuning: added a second XP source (`InfluencerRise.PlayerProgression.ProductionXpGrant`, tier-scaled XP on production-round completion, so AFK/idle play can also level up) and retuned the curve to **`firstLevelXp=400`, `levelIncrementMultiplier=1.13`** (live on `GameManagers`' `PlayerStats` component). The `1.13` value required a scoped vendored-code exception — `levelIncrementMultiplier` was hard-typed `int`, and no integer value gives sane pacing (`q≥2` walls around Level 15, `q=1` produces meaningless multi-million-level inflation) — changed to `float` (2nd vendored `PlayerStats.cs` patch, see BugTracker.md and CLAUDE.md Watch-list for full detail and risk). Result: Level 3 reachable in ~4 simulated minutes (ACTIVE), full Yourgram chain (through its Level-24 capstone `VerifiedStatus`) reachable with no XP-side wall.
+
+**⚠️ Known open issue — QuickTok/Broadcast unreachable past Level 18, independent of the XP fix above.** Every QuickTok/Broadcast business costs Cash, but no Business anywhere produces Cash — confirmed structural (not time- or XP-curve-limited) via `EconomySimulator.cs`, including a 60-simulated-day test. `TrendChase` (QuickTok's own entry point) can never be purchased, which blocks Levels 18/28/34/42/55/65/80/110/150 entirely. See BugTracker.md's "QuickTok/Broadcast businesses cost Cash" entry for full detail — needs a scoped fix (Cash-producing business, Followers-priced entry point, or similar) before the full 150-level schedule is reachable end-to-end. Out of scope for the task that found it (Business cost-curve/currency changes require separate authorization).
 
 ---
 
@@ -161,13 +169,15 @@ Reward assets live under `Resources/PlayerStats/LevelRewards/` (`LevelUpCloutCoi
 
 ## Aura-purchased Permanent Upgrades — ✅ 3 built (locked selection, no more planned)
 
-| Asset name | Aura cost/level | Effect |
-|---|---|---|
-| `ClaimYourAlgorithm` | 10, x1.5/lvl | Global production multiplier |
-| `LuckyBreakInvestment` | 15, x1.5/lvl | Boosts Manager Capsule drop odds toward rarer tiers |
-| `PassiveIncomeGrindset` | 12, x1.5/lvl | Boosts offline-progress efficiency |
+**Previously documented as "✅ 3 built" while not actually existing as assets at all — confirmed false via git history, see `docs/BugTracker.md`. Built for real this pass, all under `Assets/InfluencerRise/Resources/Upgrades/`, all native (no custom bridging needed), each verified live via MCP.**
 
-All 3 added to `PrestigeManager.exludedUpgrades` — persist across every Rebrand.
+| Asset name | Aura cost/level | Effect | Mechanism |
+|---|---|---|---|
+| `ClaimYourAlgorithm` | 10, x1.5/lvl | Global production ×1.25 (placeholder, not balance-tested) | `upgrades`, empty filters (non-contextual, global) — reaches the live business production multiplier the same native way `BulkContentBatching`/`FasterEditingSoftware` already do. ✅ Verified via MCP: FirstPost real production output 80,000 → 100,000 (×1.25 exact) after granting. |
+| `LuckyBreakInvestment` | 15, x1.5/lvl | dropWeight ×1.3/manager (placeholder) toward the 6 Rare + 3 Legendary managers, raising their odds relative to the 15 Common managers | 9 individually-targeted `UpgradeBlock` entries (`targetManager` filter, one per Rare/Legendary manager — no native group-targeting for Managers, same "manual maintenance required" pattern as the old Nepo Baby design, confirmed unavoidable gap). **Investigated native-vs-bridged feasibility first**: unlike a Manager's own `passiveBoosts` (structurally invisible to `UpgradeEffectResolver.GetMatchingBlocks`, the root cause of the original Nepo Baby bug), an *Upgrade's* contextual dropWeight blocks ARE correctly iterated by `GetMatchingBlocks`, confirmed via full code read. ✅ Fully native, verified via MCP: `TheMainCharacter`'s real weight in `CloutCoinCapsuleHigh` went 4 → 5.2 (×1.3 exact); `RonnyRingo` (Common, untargeted) stayed exactly 1. |
+| `PassiveIncomeGrindset` | 12, x1.5/lvl | Offline-progress production ×1.25 (placeholder), live production unaffected | `upgrades`, `runtimeFilter=Offline` — confirmed native mechanism (offline calculation's `ProductionOutputCalculator.CreateModifierContext` correctly sets `IsOffline`, matched by the block's `runtimeFilter`). ✅ Verified via MCP: live production ratio exactly 1.0 (unaffected), `ProfitCalculator`'s 300s offline simulation exactly ×1.25 after granting. |
+
+All 3 added to `PrestigeManager.excludedUpgrades` — persist across every Rebrand (verified via fresh disk read of `Main.unity`). `exludedCurrencies` (Aura, CloutCoin) confirmed still intact, not disturbed by this change.
 
 ## Boosts — ✅ all 3 built
 
@@ -210,9 +220,9 @@ Player Cosmetics — deferred to V1.1, confirmed not natively supported.
 
 ## Prestige — "Rebrand" — ✅ configured
 
-- Requirement: Cash ≥10,000 AND Player Level ≥5.
-- `resetLevel = false` (Player Level persists — LOCKED decision).
-- Reset: Followers, Cash, Business/Manager holders, Boost inventory. Excluded: Aura, CloutCoin, Player Level, and the 3 Aura Upgrades.
+- Requirement: Cash ≥10,000 AND Player Level ≥5. Verified live via MCP (exact match across 3 sequential real Rebrands).
+- `resetLevel = false` (Player Level persists — LOCKED decision). **Was actually `true` on the live scene component from the very first Prestige-configuring commit onward — confirmed via git history to have never been `false` at any point, a documentation error rather than a regression (see BugTracker.md). Fixed for real this pass**: set on the live `PrestigeManager` component via Edit Mode, verified `resetLevel: 0` via fresh disk read of `Main.unity`.
+- Reset: Followers, Cash, Business/Manager holders, Boost inventory. Excluded: Aura, CloutCoin, Player Level, and the 3 Aura Upgrades (all verified live/on-disk, see BugTracker.md).
 - Burnout reset via `BurnoutController.cs` (native has no CustomStat reset hook).
 - `prestigeUpgrades` (automatic, native): production/speed both compound ×2 per Rebrand via `currentPrestigeUpgradesMultiplier` — separate mechanism from Aura spend, already primed.
 - `multiplyLevelOnPrestige = false` — Cash requirement scales ×2/Rebrand, Level requirement stays fixed at 5. Open balance question for later.

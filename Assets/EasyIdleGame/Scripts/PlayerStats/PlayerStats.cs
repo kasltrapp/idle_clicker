@@ -16,8 +16,22 @@ namespace EasyIdleGame
         [Tooltip("XP required to reach the first player level.")]
         public int firstLevelXp = 1000;
 
+        // BUGFIX (see CLAUDE.md Watch-list, 2nd vendored PlayerStats.cs patch): was
+        // declared as `int`, which made this project's 150-level/15-milestone content
+        // schedule structurally unfixable via configuration alone - confirmed via
+        // EconomySimulator.cs that q>=2 (steepest available int) hits an exponential
+        // wall around Level 15, while q=1 (flattest available int) avoids the wall but
+        // produces meaningless multi-million-level inflation within 30 simulated days
+        // (per-level cost never grows while production XP keeps trickling in forever).
+        // Only a fractional q (~1.12-1.15) gives sane pacing; the runtime Level class
+        // this value feeds already stores it as `float` (Level.incrementMultiplier,
+        // Level's own constructor already takes a float), so this was purely an
+        // artificial int restriction on the exposed config field, not a real engine
+        // constraint. Confirmed safe: the only runtime consumer is
+        // PlayerStats.ResetLevel() below, which already widens into that float
+        // constructor param.
         [Tooltip("Multiplier applied to required XP after each player level-up.")]
-        public int levelIncrementMultiplier = 2;
+        public float levelIncrementMultiplier = 2;
 
         [Tooltip("If enabled, pending player levels are claimed automatically as soon as enough XP is earned. Disable for manual level-up claim flows.")]
         public bool autoLevelUp = true;
